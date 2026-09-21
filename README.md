@@ -1,47 +1,81 @@
-<h1 align="center">Hey, I'm Borhan</h1>
+<div align="center">
+
+# Hey, I'm Borhan
+
+**Computer Science Graduate · Software Developer**
+
+San Antonio, TX
+
+Currently focused on **Python, backend development, system design, and building real projects.**
+
+<a href="https://www.linkedin.com/in/borhanrahimi">
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+<a href="mailto:rahimi.borhan2000@gmail.com">
+  <img src="https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"/>
+</a>
+
+</div>
+
+---
+
+## About Me
+
+I'm a recent Computer Science graduate focused on strengthening my software engineering skills through hands-on projects.
+
+I recently completed an internship with **Costco IT's Observability Platform Engineering team**, where I gained experience working in a large enterprise engineering environment.
+
+Right now, I'm building **File Organizer**, a Python project that automatically renames, sorts, and organizes files.
+
+* **Building:** File Organizer
+* **Learning:** Backend Development & System Design
+* **Exploring:** AI-assisted Software Development
+* **Goal:** Grow into a strong Software Engineer
+
+---
+
+## Tech Stack
 
 <p align="center">
-  CS grad based in San Antonio, TX — currently deep in backend dev and system design.
+  <img src="https://skillicons.dev/icons?i=python,java,c,js,ts,react,html,css,git,github,vscode" alt="Tech Stack"/>
 </p>
 
 ---
 
-### A bit about me
+## Featured Projects
 
-I recently graduated with a CS degree and I'm spending my time building projects, leveling up my backend skills, and figuring out how AI tools fit into how I build software. Right now I'm working on File Organizer, a Python tool that automatically sorts and organizes files.
+### [File Organizer](https://github.com/borhanrahimi/file_organizer)
 
-I'm also an IT intern at Costco, where I'm getting hands-on experience in a real enterprise environment.
+**Python · Automation · File Management**
 
-**Right now:** building File Organizer
-**Learning:** backend development, system design, and how to actually use AI tools well
-**Email:** rahimi.borhan2000@gmail.com
+A Python tool that automatically renames, sorts, and organizes files.
 
-<p>
-  <a href="www.linkedin.com/in/borhanrahimi">
-    <img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" />
-  </a>
-</p>
+Built as a hands-on project to strengthen my Python fundamentals and learn how to structure clean, maintainable software.
 
----
+[View Repository →](https://github.com/borhanrahimi/file_organizer)
 
-### What I work with
+### [Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)
 
-<p>
-  <img src="https://img.shields.io/badge/-Java-007396?style=flat&logo=java&logoColor=white" />
-  <img src="https://img.shields.io/badge/-Python-3776AB?style=flat&logo=python&logoColor=white" />
-  <img src="https://img.shields.io/badge/-C-A8B9CC?style=flat&logo=c&logoColor=white" />
-  <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" />
-  <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat&logo=typescript&logoColor=white" />
-  <img src="https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white" />
-  <img src="https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white" />
-</p>
+**React · TypeScript**
+
+My personal developer portfolio for showcasing my projects, experience, and what I'm currently working on.
+
+[View Repository →](https://github.com/borhanrahimi/borhan-portfolio)
 
 ---
 
-### Projects
+## Currently Learning
 
-**[file_organizer](https://github.com/borhanrahimi/file_organizer)**
-A Python tool that automatically organizes files — my current project as I dig into backend work.
+* Backend Development
+* Python
+* APIs
+* Databases
+* System Design
+* Clean Code & Testing
+* AI-assisted Development
 
-**[borhan-portfolio](https://github.com/borhanrahimi/borhan-portfolio)**
-My personal developer portfolio, built with TypeScript.
+---
+
+<div align="center">
+
+**Building. Learning. Imp**
