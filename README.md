@@ -1,4 +1,3 @@
-
 <div align="center">
 
 # Hey, I'm Borhan
@@ -18,6 +17,8 @@
 
 </div>
 
+---
+
 ## About Me
 
 Recent CS grad who likes making things that are actually useful — most recently a tool that stops me from losing files in a messy Downloads folder.
@@ -28,20 +29,29 @@ Right now I'm digging into **backend development**, **system design**, and figur
 
 > **Currently building:** File Organizer
 
+---
+
 ## Tech Stack
 
 <div align="center">
 
-**Languages**  
+**Languages**
+<br>
 <img src="https://skillicons.dev/icons?i=python,java,c,js,ts&theme=dark" alt="Languages" />
+<br><br>
 
-**Frameworks & Libraries**  
+**Frameworks & Libraries**
+<br>
 <img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,tailwind&theme=dark" alt="Frameworks and Libraries" />
+<br><br>
 
-**Dev Tools & Platforms**  
+**Dev Tools & Platforms**
+<br>
 <img src="https://skillicons.dev/icons?i=git,github,vscode,aws,jira&theme=dark" alt="Dev Tools and Platforms" />
 
 </div>
+
+---
 
 ## Projects
 
@@ -55,21 +65,30 @@ A tool for automatically renaming, sorting, and organizing files.
 
 My personal developer portfolio for showcasing my work and projects.
 
+---
+
 ## Up Next
 
 Planning a **wardrobe tracker** — an app for keeping an inventory of clothes, watches, shoes, and other wearables, making it easy to know exactly what you own.
 
+---
+
 ## GitHub Activity
 
 <div align="center">
+
 <img src="https://streak-stats.demolab.com?user=borhanrahimi&theme=dark&hide_border=true" alt="GitHub Streak" />
+
 </div>
+
+---
 
 <div align="center">
 
 <img src="https://img.shields.io/badge/BELIEVE-FFDE00?style=for-the-badge&labelColor=FFDE00&color=FFDE00" alt="Believe" height="55"/>
 
+<br><br>
+
 **Keep building · Keep learning · Keep going**
 
 </div>
-
