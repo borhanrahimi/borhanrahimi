@@ -2,80 +2,66 @@
 
 # Hey, I'm Borhan
 
-**Computer Science Graduate · Software Developer**
+`CS GRAD // SOFTWARE DEVELOPER`
 
-San Antonio, TX
+`San Antonio, TX`
 
-Currently focused on **Python, backend development, system design, and building real projects.**
+<br>
 
 <a href="https://www.linkedin.com/in/borhanrahimi">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  <img src="https://img.shields.io/badge/LinkedIn-CONNECT-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 <a href="mailto:rahimi.borhan2000@gmail.com">
-  <img src="https://img.shields.io/badge/Email-EA4335?style=flat&logo=gmail&logoColor=white" alt="Email"/>
+  <img src="https://img.shields.io/badge/Email-CONTACT-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 
 </div>
 
 ---
 
-## About Me
+## About
 
-I'm a recent Computer Science graduate focused on strengthening my software engineering skills through hands-on projects.
+Recent CS grad who likes making things that are actually useful — most recently a tool that stops me from losing files in a messy Downloads folder.
 
-I recently completed an internship with **Costco IT's Observability Platform Engineering team**, where I gained experience working in a large enterprise engineering environment.
+I interned on Costco IT's **Observability Platform Engineering** team, where I got real exposure to backend systems at scale.
 
-Right now, I'm building **File Organizer**, a Python project that automatically renames, sorts, and organizes files.
+Right now I'm digging into backend development, system design, and figuring out how to actually use AI tools well — not just talk about them.
 
-* **Building:** File Organizer
-* **Learning:** Backend Development & System Design
-* **Exploring:** AI-assisted Software Development
-* **Goal:** Grow into a strong Software Engineer
+`Currently building → File Organizer`
 
 ---
 
-## Tech Stack
+## Stack
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,java,c,js,ts,react,html,css,git,github,vscode" alt="Tech Stack"/>
+  <img src="https://skillicons.dev/icons?i=python,java,c,js,ts,react,git,github,vscode&theme=dark" alt="Tech Stack" />
 </p>
 
 ---
 
-## Featured Projects
+## Projects
 
 ### [File Organizer](https://github.com/borhanrahimi/file_organizer)
-
-**Python · Automation · File Management**
-
-A Python tool that automatically renames, sorts, and organizes files.
-
-Built as a hands-on project to strengthen my Python fundamentals and learn how to structure clean, maintainable software.
-
-[View Repository →](https://github.com/borhanrahimi/file_organizer)
+Python tool for automatically renaming, sorting, and organizing files.
 
 ### [Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)
-
-**React · TypeScript**
-
-My personal developer portfolio for showcasing my projects, experience, and what I'm currently working on.
-
-[View Repository →](https://github.com/borhanrahimi/borhan-portfolio)
+Personal developer portfolio built with React and TypeScript.
 
 ---
 
-## Currently Learning
+## GitHub
 
-* Backend Development
-* Python
-* APIs
-* Databases
-* System Design
-* Clean Code & Testing
-* AI-assisted Development
+<p align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=borhanrahimi&show_icons=true&theme=dark&hide_border=true" alt="GitHub Stats" />
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=borhanrahimi&layout=compact&theme=dark&hide_border=true" alt="Top Languages" />
+</p>
 
 ---
 
 <div align="center">
 
-**Building. Learning. Imp**
+<img src="https://img.shields.io/badge/BELIEVE-FFDE00?style=for-the-badge&color=FFDE00" alt="Believe" height="60"/>
+
+`keep building // keep learning // keep going`
+
+</div>
