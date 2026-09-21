@@ -1,17 +1,13 @@
+
 <div align="center">
 
 # Hey, I'm Borhan
 
 **CS Grad · Software Developer**
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" width="22" alt="Texas Flag" />
-&nbsp; San Antonio, TX
-
-<br>
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" width="22" alt="Texas Flag" /> &nbsp; **San Antonio, TX**
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=16&duration=2800&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Building+with+Python;Learning+Backend+Development;Studying+System+Design;Building.+Learning.+Improving." alt="Typing SVG" />
-
-<br>
 
 <a href="https://www.linkedin.com/in/borhanrahimi">
   <img src="https://img.shields.io/badge/LinkedIn-CONNECT-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/>
@@ -21,8 +17,6 @@
 </a>
 
 </div>
-
----
 
 ## About Me
 
@@ -34,56 +28,48 @@ Right now I'm digging into **backend development**, **system design**, and figur
 
 > **Currently building:** File Organizer
 
----
-
 ## Tech Stack
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=python,java,c,js,ts,react,git,github,vscode&theme=dark" alt="Tech Stack" />
+**Languages**  
+<img src="https://skillicons.dev/icons?i=python,java,c,js,ts&theme=dark" alt="Languages" />
+
+**Frameworks & Libraries**  
+<img src="https://skillicons.dev/icons?i=react,nextjs,nodejs,tailwind&theme=dark" alt="Frameworks and Libraries" />
+
+**Dev Tools & Platforms**  
+<img src="https://skillicons.dev/icons?i=git,github,vscode,aws,jira&theme=dark" alt="Dev Tools and Platforms" />
 
 </div>
 
----
-
 ## Projects
 
-> ### [File Organizer](https://github.com/borhanrahimi/file_organizer)
-> `Python` `Automation`
->
-> A tool for automatically renaming, sorting, and organizing files.
+### [File Organizer](https://github.com/borhanrahimi/file_organizer)
+`Python` `Automation`
 
-<br>
+A tool for automatically renaming, sorting, and organizing files.
 
-> ### [Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)
-> `React` `TypeScript`
->
-> My personal developer portfolio for showcasing my work and projects.
+### [Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)
+`React` `TypeScript`
 
----
+My personal developer portfolio for showcasing my work and projects.
 
 ## Up Next
 
-Planning a wardrobe tracker — an app to keep track of clothes, watches, shoes, and other wearables, including how often each item gets worn.
-
----
+Planning a **wardrobe tracker** — an app for keeping an inventory of clothes, watches, shoes, and other wearables, making it easy to know exactly what you own.
 
 ## GitHub Activity
 
 <div align="center">
-
 <img src="https://streak-stats.demolab.com?user=borhanrahimi&theme=dark&hide_border=true" alt="GitHub Streak" />
-
 </div>
-
----
 
 <div align="center">
 
 <img src="https://img.shields.io/badge/BELIEVE-FFDE00?style=for-the-badge&labelColor=FFDE00&color=FFDE00" alt="Believe" height="55"/>
 
-<br><br>
-
 **Keep building · Keep learning · Keep going**
 
 </div>
+
