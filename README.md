@@ -4,7 +4,7 @@
 
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2800&pause=1000&color=58A6FF&center=true&vCenter=true&width=400&lines=CS+Grad+%C2%B7+Software+Developer" alt="CS Grad · Software Developer" />
 
-San Antonio, TX
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" width="22" alt="Texas Flag" /> San Antonio, TX
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/borhanrahimi)
 [![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:rahimi.borhan2000@gmail.com)
