@@ -71,15 +71,10 @@ My personal developer portfolio for showcasing my work and projects.
 <img src="https://streak-stats.demolab.com?user=borhanrahimi&theme=dark&hide_border=true" alt="GitHub Streak" />
 </div>
 
-### Recent Activity
+## Recently Worked On
 
-<!--RECENT_ACTIVITY:start-->
-1. ⬆️ Pushed undefined commit(s) to [borhanrahimi/file_organizer](https://github.com/borhanrahimi/file_organizer)<br>
-2. ⬆️ Pushed undefined commit(s) to [borhanrahimi/file_organizer](https://github.com/borhanrahimi/file_organizer)<br>
-3. ⬆️ Pushed undefined commit(s) to [borhanrahimi/borhanrahimi](https://github.com/borhanrahimi/borhanrahimi)<br>
-4. ⬆️ Pushed undefined commit(s) to [borhanrahimi/borhanrahimi](https://github.com/borhanrahimi/borhanrahimi)<br>
-5. ⬆️ Pushed undefined commit(s) to [borhanrahimi/borhanrahimi](https://github.com/borhanrahimi/borhanrahimi)<br>
-<!--RECENT_ACTIVITY:end-->
+<!--RECENT_PROJECTS:start-->
+<!--RECENT_PROJECTS:end-->
 
 ---
 
