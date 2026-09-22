@@ -1,1 +1,14 @@
-
+{
+  "file_organizer": {
+    "name": "File Organizer",
+    "stack": "Python"
+  },
+  "borhan-portfolio": {
+    "name": "Borhan Portfolio",
+    "stack": "React · TypeScript"
+  },
+  "borhanrahimi": {
+    "name": "GitHub Profile",
+    "stack": "Markdown · GitHub Actions"
+  }
+}
