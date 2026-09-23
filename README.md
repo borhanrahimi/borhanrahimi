@@ -74,8 +74,8 @@ My personal developer portfolio for showcasing my work and projects.
 ## Recently Worked On
 
 <!--RECENT_PROJECTS:start-->
-**GitHub Profile** — Markdown · GitHub Actions  
-**File Organizer** — Python
+**File Organizer** — Python  
+**GitHub Profile** — Markdown · GitHub Actions
 <!--RECENT_PROJECTS:end-->
 
 ---
