@@ -68,6 +68,8 @@ My personal developer portfolio showcasing my software engineering projects and 
 ## Recently Worked On
 
 <!--RECENT_PROJECTS:start-->
+**[Linkwell](https://github.com/borhanrahimi/linkwell)** — TypeScript  
+**[File Organizer](https://github.com/borhanrahimi/file_organizer)** — Python
 <!--RECENT_PROJECTS:end-->
 
 ---
