@@ -15,13 +15,11 @@
 
 ## About Me
 
-Recent CS grad who likes building useful software and learning how systems work behind the scenes.
+Recent CS grad who enjoys building useful software and learning how systems work behind the scenes.
 
 I interned on Costco IT's Observability Platform Engineering team, gaining hands-on experience in a large enterprise engineering environment.
 
 Right now I'm focused on backend development, system design, observability, and building projects that solve real problems.
-
-**Currently building:** [Linkwell](https://github.com/borhanrahimi/linkwell) · [File Organizer](https://github.com/borhanrahimi/file_organizer)
 
 ---
 
@@ -46,6 +44,7 @@ Right now I'm focused on backend development, system design, observability, and 
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
 ![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
 ![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white)
 
@@ -58,29 +57,31 @@ Right now I'm focused on backend development, system design, observability, and 
 **[Linkwell](https://github.com/borhanrahimi/linkwell)** · `Next.js` `React` `TypeScript`  
 A modern bookmark manager designed to help users save, organize, maintain, and rediscover useful links.
 
-**[File Organizer](https://github.com/borhanrahimi/file_organizer)** · `Python` `Automation` `Tauri`  
+**[File Organizer](https://github.com/borhanrahimi/file_organizer)** · `Python` `Automation`  
 A file automation tool that monitors folders, organizes files by type, cleans filenames, and safely handles duplicates.
 
 **[Observability Lab](https://github.com/borhanrahimi/observability-lab)** · `OpenTelemetry` `Grafana` `Docker`  
-A hands-on lab for learning metrics, traces, logs, dashboards, and observability pipelines.
+A hands-on observability lab for learning metrics, traces, logs, dashboards, and telemetry pipelines.
 
 **[Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)** · `Next.js` `React` `TypeScript`  
-My personal developer portfolio for showcasing my software engineering projects and experience.
+My personal developer portfolio showcasing my software engineering projects and experience.
+
+---
+
+## Recently Worked On
+
+<!--RECENT_PROJECTS:start-->
+<!--RECENT_PROJECTS:end-->
 
 ---
 
 ## GitHub Activity
 
 <div align="center">
+
 <img src="https://streak-stats.demolab.com?user=borhanrahimi&theme=dark&hide_border=true" alt="GitHub Streak" />
+
 </div>
-
-## Recently Worked On
-
-<!--RECENT_PROJECTS:start-->
-**File Organizer** — Python  
-**GitHub Profile** — Markdown · GitHub Actions
-<!--RECENT_PROJECTS:end-->
 
 ---
 
