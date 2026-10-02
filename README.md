@@ -60,9 +60,6 @@ A modern bookmark manager designed to help users save, organize, maintain, and r
 **[File Organizer](https://github.com/borhanrahimi/file_organizer)** · `Python` `Automation`  
 A file automation tool that monitors folders, organizes files by type, cleans filenames, and safely handles duplicates.
 
-**[Observability Lab](https://github.com/borhanrahimi/observability-lab)** · `OpenTelemetry` `Grafana` `Docker`  
-A hands-on observability lab for learning metrics, traces, logs, dashboards, and telemetry pipelines.
-
 **[Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)** · `Next.js` `React` `TypeScript`  
 My personal developer portfolio showcasing my software engineering projects and experience.
 
