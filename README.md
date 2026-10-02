@@ -6,8 +6,8 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" width="22" alt="Texas Flag" /> San Antonio, TX
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square\&logo=linkedin\&logoColor=white)](https://www.linkedin.com/in/borhanrahimi)
-[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square\&logo=gmail\&logoColor=white)](mailto:rahimi.borhan2000@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/borhanrahimi)
+[![Email](https://img.shields.io/badge/Email-Contact-D14836?style=flat-square&logo=gmail&logoColor=white)](mailto:rahimi.borhan2000@gmail.com)
 
 </div>
 
@@ -15,13 +15,13 @@
 
 ## About Me
 
-Recent CS grad who likes building things that are actually useful — most recently a tool that stops me from losing files in a messy Downloads folder.
+Recent CS grad who likes building useful software and learning how systems work behind the scenes.
 
 I interned on Costco IT's Observability Platform Engineering team, gaining hands-on experience in a large enterprise engineering environment.
 
-Right now I'm focused on backend development, system design, and learning to use AI tools well — not just talk about them.
+Right now I'm focused on backend development, system design, observability, and building projects that solve real problems.
 
-**Currently building:** [File Organizer](https://github.com/borhanrahimi/file_organizer)
+**Currently building:** [Linkwell](https://github.com/borhanrahimi/linkwell) · [File Organizer](https://github.com/borhanrahimi/file_organizer)
 
 ---
 
@@ -30,24 +30,24 @@ Right now I'm focused on backend development, system design, and learning to use
 <div align="center">
 
 **Languages** <br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square\&logo=python\&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square\&logo=openjdk\&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square\&logo=c\&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square\&logo=javascript\&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square\&logo=typescript\&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
 
 **Frameworks & Libraries** <br>
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square\&logo=react\&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square\&logo=nextdotjs\&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square\&logo=nodedotjs\&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square\&logo=tailwindcss\&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
 **Dev Tools & Platforms** <br>
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square\&logo=git\&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square\&logo=github\&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square\&logo=visualstudiocode\&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square\&logo=amazonaws\&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square\&logo=jira\&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
+![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white)
 
 </div>
 
@@ -55,13 +55,17 @@ Right now I'm focused on backend development, system design, and learning to use
 
 ## Projects
 
-**[File Organizer](https://github.com/borhanrahimi/file_organizer)** · `Python` `Automation`
-A tool for automatically renaming, sorting, and organizing files.
+**[Linkwell](https://github.com/borhanrahimi/linkwell)** · `Next.js` `React` `TypeScript`  
+A modern bookmark manager designed to help users save, organize, maintain, and rediscover useful links.
 
-**[Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)** · `React` `TypeScript`
-My personal developer portfolio for showcasing my work and projects.
+**[File Organizer](https://github.com/borhanrahimi/file_organizer)** · `Python` `Automation` `Tauri`  
+A file automation tool that monitors folders, organizes files by type, cleans filenames, and safely handles duplicates.
 
-**Up next:** a wardrobe tracker — an app for keeping an inventory of clothes, watches, shoes, and other wearables.
+**[Observability Lab](https://github.com/borhanrahimi/observability-lab)** · `OpenTelemetry` `Grafana` `Docker`  
+A hands-on lab for learning metrics, traces, logs, dashboards, and observability pipelines.
+
+**[Borhan Portfolio](https://github.com/borhanrahimi/borhan-portfolio)** · `Next.js` `React` `TypeScript`  
+My personal developer portfolio for showcasing my software engineering projects and experience.
 
 ---
 
