@@ -14,14 +14,14 @@
 
 </div>
 
-## 👋 About Me
+## About Me
 
-- 🎓 Recent **CS grad** who loves building apps and working on projects
-- 💼 Interned at **Costco IT**, working in a large enterprise engineering environment
-- 🛠️ I build across the stack: web apps, desktop tools, and mobile
-- 🌱 Always building something new, learning a new tool, or improving one of my projects
+- Recent **CS grad** who loves building apps and working on projects
+- Interned at **Costco IT**, working in a large enterprise engineering environment
+- I build across the stack: web apps, desktop tools, and mobile
+- Always building something new, learning a new tool, or improving one of my projects
 
-## 🧰 Tech Stack
+## Tech Stack
 
 <div align="center">
 
@@ -55,12 +55,12 @@
 
 </div>
 
-## 🚀 Featured Projects
+## Featured Projects
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/borhanrahimi/linkwell">🔗 Linkwell</a></h3>
+      <h3><a href="https://github.com/borhanrahimi/linkwell">Linkwell</a></h3>
       A smarter bookmark manager to save, organize, maintain, and rediscover links.
       <br><br>
       <img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,postgres&theme=dark" height="28" alt="Next.js, TypeScript, Tailwind, PostgreSQL" />
@@ -68,7 +68,7 @@
       <a href="https://linkwell-dypu.vercel.app/">Live demo</a> · <a href="https://github.com/borhanrahimi/linkwell">Code</a>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/borhanrahimi/file_organizer">🗂️ File Organizer</a></h3>
+      <h3><a href="https://github.com/borhanrahimi/file_organizer">File Organizer</a></h3>
       Watches folders in real time, sorts files by type, cleans filenames, and safely handles duplicates.
       <br><br>
       <img src="https://skillicons.dev/icons?i=py,fastapi,tauri,react&theme=dark" height="28" alt="Python, FastAPI, Tauri, React" />
@@ -78,7 +78,7 @@
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/borhanrahimi/borhan-portfolio">🌐 Portfolio</a></h3>
+      <h3><a href="https://github.com/borhanrahimi/borhan-portfolio">Portfolio</a></h3>
       My personal developer portfolio showcasing my projects, experience, and how to get in touch.
       <br><br>
       <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind&theme=dark" height="28" alt="Next.js, React, TypeScript, Tailwind" />
@@ -86,7 +86,7 @@
       <a href="https://borhanrahimi.com">Live site</a> · <a href="https://github.com/borhanrahimi/borhan-portfolio">Code</a>
     </td>
     <td width="50%" valign="top">
-      <h3>⚡ Recently Worked On</h3>
+      <h3>Recently Worked On</h3>
       Updated automatically from my latest pushes.
       <br><br>
 
@@ -98,7 +98,7 @@
   </tr>
 </table>
 
-## 📊 GitHub Activity
+## GitHub Activity
 
 <div align="center">
 
@@ -107,7 +107,29 @@
 
 </div>
 
+## Words I Build By
+
 <div align="center">
+
+<table>
+  <tr>
+    <td align="center" width="33%" valign="top">
+      <i>"Stay hungry. Stay foolish."</i>
+      <br><br>
+      <b>Steve Jobs</b>
+    </td>
+    <td align="center" width="33%" valign="top">
+      <i>"I start early and I stay late, day after day, year after year. It took me 17 years and 114 days to become an overnight success."</i>
+      <br><br>
+      <b>Lionel Messi</b>
+    </td>
+    <td align="center" width="33%" valign="top">
+      <i>"I believe in believe."</i>
+      <br><br>
+      <b>Ted Lasso</b>
+    </td>
+  </tr>
+</table>
 
 <br>
 
