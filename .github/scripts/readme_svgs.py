@@ -59,7 +59,8 @@ def wrap(text, max_chars, max_lines):
     return lines
 
 
-# Night (dark) and dusk (light) colors for the How I Met Your Mother style header
+# How I Met Your Mother style header: a rainy night with the yellow umbrella (dark)
+# and a sunny day with the blue French horn (light)
 HEADER_SCENES = {
     "dark": {
         "sky_top": "#0B1026",
@@ -75,16 +76,15 @@ HEADER_SCENES = {
         "label": "#9DB4FF",
     },
     "light": {
-        "sky_top": "#9CC3EA",
-        "sky_bottom": "#F6D9C4",
-        "moon": "#FFFFFF",
-        "building": "#2B3A55",
-        "building_far": "#6F84A8",
-        "window": "#FFE29A",
-        "rain": "#4C6A9C",
+        "sky_top": "#6FB7EE",
+        "sky_bottom": "#E4F3FF",
+        "sun": "#FFD54A",
+        "building": "#34466B",
+        "building_far": "#A3B8D8",
+        "window": "#EAF3FF",
         "title": "#14213D",
         "narration": "#33415C",
-        "tagline": "#9A6A00",
+        "tagline": "#1F5FBF",
         "label": "#2F4B7C",
     },
 }
@@ -136,10 +136,73 @@ def header(theme):
     # Empire State style spire
     spire = f"""    <path d="M1118 320 V214 H1128 V196 H1136 V170 H1140 V140 H1142 V170 H1146 V196 H1154 V214 H1164 V320 Z" fill="{s["building"]}"/>"""
 
-    rain = "\n".join(
-        f'    <line class="drop" x1="{dx}" y1="{dy}" x2="{dx - 4}" y2="{dy + 16}" stroke="{s["rain"]}" stroke-opacity="{rng.uniform(0.25, 0.6):.2f}" stroke-width="1.4" style="animation-delay: -{rng.uniform(0, 1.4):.2f}s; animation-duration: {rng.uniform(0.9, 1.4):.2f}s"/>'
-        for dx, dy in ((rng.randint(0, 1220), rng.randint(-340, 300)) for _ in range(110))
-    )
+    if theme == "dark":
+        glow_color = s["moon"]
+        sky = f"""    <circle cx="790" cy="70" r="90" fill="url(#glow)"/>
+    <circle cx="790" cy="70" r="26" fill="{s["moon"]}"/>
+    <circle cx="780" cy="62" r="5" fill="{s["sky_top"]}" opacity="0.12"/>
+    <circle cx="798" cy="80" r="3.5" fill="{s["sky_top"]}" opacity="0.12"/>"""
+
+        rain = "\n".join(
+            f'    <line class="drop" x1="{dx}" y1="{dy}" x2="{dx - 4}" y2="{dy + 16}" stroke="{s["rain"]}" stroke-opacity="{rng.uniform(0.25, 0.6):.2f}" stroke-width="1.4" style="animation-delay: -{rng.uniform(0, 1.4):.2f}s; animation-duration: {rng.uniform(0.9, 1.4):.2f}s"/>'
+            for dx, dy in ((rng.randint(0, 1220), rng.randint(-340, 300)) for _ in range(110))
+        )
+
+        # No rain under the umbrella
+        weather = f"""  <mask id="dry">
+    <rect width="1200" height="320" fill="#FFFFFF"/>
+    <path d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
+  </mask>
+  <g mask="url(#dry)">
+{rain}
+  </g>"""
+
+        # The yellow umbrella
+        prop = """  <g class="sway">
+    <path d="M1000 150 V250 A12 12 0 0 1 976 250" fill="none" stroke="#3B2A1A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M906 150 A94 94 0 0 1 1094 150 Q1070.5 134 1047 150 Q1023.5 134 1000 150 Q976.5 134 953 150 Q929.5 134 906 150 Z" fill="url(#canopy)"/>
+    <path d="M1000 56 Q972 90 953 150 M1000 56 Q1028 90 1047 150" fill="none" stroke="#D99A00" stroke-width="2"/>
+    <path d="M1000 56 Q960 76 930 120" fill="none" stroke="#FFF3A8" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="1000" y1="56" x2="1000" y2="42" stroke="#3B2A1A" stroke-width="4" stroke-linecap="round"/>
+  </g>"""
+    else:
+        glow_color = s["sun"]
+        sky = f"""    <circle cx="790" cy="66" r="110" fill="url(#glow)"/>
+    <circle cx="790" cy="66" r="30" fill="{s["sun"]}"/>"""
+
+        clouds = []
+        for cx, cy, size, speed in [(120, 52, 1.0, 60), (520, 34, 0.8, 75), (700, 120, 0.7, 90), (1080, 40, 0.9, 70)]:
+            clouds.append(
+                f'    <g class="cloud" style="animation-duration: {speed}s" opacity="0.9">'
+                f'<g transform="translate({cx} {cy}) scale({size})">'
+                '<ellipse cx="0" cy="12" rx="46" ry="14" fill="#FFFFFF"/>'
+                '<circle cx="-16" cy="4" r="16" fill="#FFFFFF"/>'
+                '<circle cx="10" cy="-2" r="21" fill="#FFFFFF"/>'
+                '<circle cx="30" cy="8" r="13" fill="#FFFFFF"/>'
+                "</g></g>"
+            )
+        weather = "  <g>\n" + "\n".join(clouds) + "\n  </g>"
+
+        # The blue French horn
+        prop = """  <g class="sway">
+    <circle cx="990" cy="168" r="62" fill="none" stroke="#1E4FB8" stroke-width="13"/>
+    <circle cx="990" cy="168" r="62" fill="none" stroke="#3C7BF0" stroke-width="7"/>
+    <circle cx="982" cy="176" r="36" fill="none" stroke="#1E4FB8" stroke-width="10"/>
+    <circle cx="982" cy="176" r="36" fill="none" stroke="#5B93F5" stroke-width="5"/>
+    <path d="M1048 188 C1070 194 1092 192 1108 186 L1118 266 C1094 248 1068 226 1048 214 Z" fill="#2D6CDF"/>
+    <path d="M1052 193 C1072 199 1090 198 1104 193" fill="none" stroke="#A8C6FA" stroke-width="2" stroke-opacity="0.7"/>
+    <ellipse cx="1113" cy="226" rx="12" ry="41" transform="rotate(-7 1113 226)" fill="#1E4FB8"/>
+    <ellipse cx="1113" cy="226" rx="7" ry="34" transform="rotate(-7 1113 226)" fill="#0F2F75"/>
+    <rect x="955" y="118" width="8" height="16" rx="2" fill="#C9D3E3"/>
+    <rect x="970" y="113" width="8" height="16" rx="2" fill="#C9D3E3"/>
+    <rect x="985" y="110" width="8" height="16" rx="2" fill="#C9D3E3"/>
+    <ellipse cx="959" cy="118" rx="7" ry="3.5" fill="#E6ECF5"/>
+    <ellipse cx="974" cy="113" rx="7" ry="3.5" fill="#E6ECF5"/>
+    <ellipse cx="989" cy="110" rx="7" ry="3.5" fill="#E6ECF5"/>
+    <path d="M944 214 L912 246" stroke="#3C7BF0" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="909" cy="249" r="6" fill="#C9D3E3"/>
+    <path d="M948 128 C936 150 938 190 960 206" fill="none" stroke="#A8C6FA" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
+  </g>"""
 
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hey, i'm borhan. Kids, let me tell you about the apps I built.">
   <style>
@@ -153,28 +216,22 @@ def header(theme):
     }}
     .drop {{ animation: fall 1.2s linear infinite; }}
     @keyframes fall {{ to {{ transform: translate(-20px, 340px); }} }}
-    .umbrella {{ transform-box: view-box; transform-origin: 1000px 262px; animation: sway 5s ease-in-out infinite; }}
+    .sway {{ transform-box: view-box; transform-origin: 1000px 262px; animation: sway 5s ease-in-out infinite; }}
     @keyframes sway {{ 0%, 100% {{ transform: rotate(-4deg); }} 50% {{ transform: rotate(4deg); }} }}
     .twinkle {{ animation: twinkle 4s ease-in-out infinite; }}
     @keyframes twinkle {{ 50% {{ opacity: 0.15; }} }}
+    .cloud {{ animation: drift 60s linear infinite alternate; }}
+    @keyframes drift {{ to {{ transform: translateX(80px); }} }}
   </style>
   <defs>
     <clipPath id="frame"><rect width="1200" height="320" rx="20"/></clipPath>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{s["sky_top"]}"/><stop offset="1" stop-color="{s["sky_bottom"]}"/></linearGradient>
-    <radialGradient id="moonGlow"><stop offset="0" stop-color="{s["moon"]}" stop-opacity="0.35"/><stop offset="1" stop-color="{s["moon"]}" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="{glow_color}" stop-opacity="0.45"/><stop offset="1" stop-color="{glow_color}" stop-opacity="0"/></radialGradient>
     <linearGradient id="canopy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE14D"/><stop offset="1" stop-color="#F5B800"/></linearGradient>
-    <!-- no rain under the umbrella -->
-    <mask id="dry">
-      <rect width="1200" height="320" fill="#FFFFFF"/>
-      <path d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
-    </mask>
   </defs>
   <g clip-path="url(#frame)">
     <rect width="1200" height="320" fill="url(#sky)"/>
-    <circle cx="790" cy="70" r="90" fill="url(#moonGlow)"/>
-    <circle cx="790" cy="70" r="26" fill="{s["moon"]}"/>
-    <circle cx="780" cy="62" r="5" fill="{s["sky_top"]}" opacity="0.12"/>
-    <circle cx="798" cy="80" r="3.5" fill="{s["sky_top"]}" opacity="0.12"/>
+{sky}
   <g>
 {chr(10).join(far_buildings)}
   </g>
@@ -183,17 +240,9 @@ def header(theme):
 {spire}
 {chr(10).join(windows)}
   </g>
-  <g mask="url(#dry)">
-{rain}
-  </g>
+{weather}
 
-  <g class="umbrella">
-    <path d="M1000 150 V250 A12 12 0 0 1 976 250" fill="none" stroke="#3B2A1A" stroke-width="5" stroke-linecap="round"/>
-    <path d="M906 150 A94 94 0 0 1 1094 150 Q1070.5 134 1047 150 Q1023.5 134 1000 150 Q976.5 134 953 150 Q929.5 134 906 150 Z" fill="url(#canopy)"/>
-    <path d="M1000 56 Q972 90 953 150 M1000 56 Q1028 90 1047 150" fill="none" stroke="#D99A00" stroke-width="2"/>
-    <path d="M1000 56 Q960 76 930 120" fill="none" stroke="#FFF3A8" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
-    <line x1="1000" y1="56" x2="1000" y2="42" stroke="#3B2A1A" stroke-width="4" stroke-linecap="round"/>
-  </g>
+{prop}
   </g>
   <rect x="0.5" y="0.5" width="1199" height="319" rx="20" fill="none" stroke="{t["border"]}"/>
 

@@ -10,25 +10,22 @@
     }
     .drop { animation: fall 1.2s linear infinite; }
     @keyframes fall { to { transform: translate(-20px, 340px); } }
-    .umbrella { transform-box: view-box; transform-origin: 1000px 262px; animation: sway 5s ease-in-out infinite; }
+    .sway { transform-box: view-box; transform-origin: 1000px 262px; animation: sway 5s ease-in-out infinite; }
     @keyframes sway { 0%, 100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
     .twinkle { animation: twinkle 4s ease-in-out infinite; }
     @keyframes twinkle { 50% { opacity: 0.15; } }
+    .cloud { animation: drift 60s linear infinite alternate; }
+    @keyframes drift { to { transform: translateX(80px); } }
   </style>
   <defs>
     <clipPath id="frame"><rect width="1200" height="320" rx="20"/></clipPath>
     <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0B1026"/><stop offset="1" stop-color="#2A2350"/></linearGradient>
-    <radialGradient id="moonGlow"><stop offset="0" stop-color="#F4F1DE" stop-opacity="0.35"/><stop offset="1" stop-color="#F4F1DE" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#F4F1DE" stop-opacity="0.45"/><stop offset="1" stop-color="#F4F1DE" stop-opacity="0"/></radialGradient>
     <linearGradient id="canopy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE14D"/><stop offset="1" stop-color="#F5B800"/></linearGradient>
-    <!-- no rain under the umbrella -->
-    <mask id="dry">
-      <rect width="1200" height="320" fill="#FFFFFF"/>
-      <path d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
-    </mask>
   </defs>
   <g clip-path="url(#frame)">
     <rect width="1200" height="320" fill="url(#sky)"/>
-    <circle cx="790" cy="70" r="90" fill="url(#moonGlow)"/>
+    <circle cx="790" cy="70" r="90" fill="url(#glow)"/>
     <circle cx="790" cy="70" r="26" fill="#F4F1DE"/>
     <circle cx="780" cy="62" r="5" fill="#0B1026" opacity="0.12"/>
     <circle cx="798" cy="80" r="3.5" fill="#0B1026" opacity="0.12"/>
@@ -125,6 +122,10 @@
     <rect x="1188" y="305" width="5" height="6" fill="#FFD86B" opacity="0.85"/>
     <rect x="1221" y="305" width="5" height="6" fill="#FFD86B" opacity="0.85"/>
   </g>
+  <mask id="dry">
+    <rect width="1200" height="320" fill="#FFFFFF"/>
+    <path d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
+  </mask>
   <g mask="url(#dry)">
     <line class="drop" x1="39" y1="6" x2="35" y2="22" stroke="#9DB4FF" stroke-opacity="0.44" stroke-width="1.4" style="animation-delay: -0.62s; animation-duration: 0.91s"/>
     <line class="drop" x1="678" y1="189" x2="674" y2="205" stroke="#9DB4FF" stroke-opacity="0.47" stroke-width="1.4" style="animation-delay: -0.72s; animation-duration: 0.93s"/>
@@ -238,7 +239,7 @@
     <line class="drop" x1="329" y1="96" x2="325" y2="112" stroke="#9DB4FF" stroke-opacity="0.56" stroke-width="1.4" style="animation-delay: -1.38s; animation-duration: 1.03s"/>
   </g>
 
-  <g class="umbrella">
+  <g class="sway">
     <path d="M1000 150 V250 A12 12 0 0 1 976 250" fill="none" stroke="#3B2A1A" stroke-width="5" stroke-linecap="round"/>
     <path d="M906 150 A94 94 0 0 1 1094 150 Q1070.5 134 1047 150 Q1023.5 134 1000 150 Q976.5 134 953 150 Q929.5 134 906 150 Z" fill="url(#canopy)"/>
     <path d="M1000 56 Q972 90 953 150 M1000 56 Q1028 90 1047 150" fill="none" stroke="#D99A00" stroke-width="2"/>
