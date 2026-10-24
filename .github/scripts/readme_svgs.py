@@ -168,10 +168,35 @@ def gang_member(person, x, y, scale):
     </g>"""
 
 
+def beer_mug(x, y, angle, side):
+    # A mug 24 wide and 30 tall, its bottom center at (x, y), tilted toward the middle
+    return f"""    <g transform="translate({x} {y}) rotate({angle})">
+      <g class="clink-{side}">
+        <path d="M12 -22 C20 -22 22 -8 12 -6" fill="none" stroke="#F7E7C6" stroke-width="3.5" stroke-opacity="0.9"/>
+        <rect x="-12" y="-30" width="24" height="30" rx="3" fill="#F2A93B"/>
+        <rect x="-12" y="-30" width="24" height="30" rx="3" fill="none" stroke="#FFFFFF" stroke-opacity="0.55" stroke-width="2"/>
+        <rect x="-8" y="-24" width="3" height="20" rx="1.5" fill="#FFFFFF" fill-opacity="0.45"/>
+        <circle cx="3" cy="-12" r="1.6" fill="#FFF3D6" fill-opacity="0.8"/>
+        <circle cx="6" cy="-19" r="1.2" fill="#FFF3D6" fill-opacity="0.8"/>
+        <path d="M-14 -28 C-16 -36 -6 -40 -2 -35 C2 -41 12 -39 12 -33 C18 -34 18 -26 13 -26 Z" fill="#FFFFFF"/>
+      </g>
+    </g>"""
+
+
+def beer_toast():
+    # Five mugs meeting above Ted's head
+    mugs = [(818, 152, 28, "left"), (842, 138, 14, "left"), (868, 132, 0, "middle"), (894, 138, -14, "right"), (918, 152, -28, "right")]
+    sparkle = """    <g class="sparkle" stroke="#FFE680" stroke-width="3" stroke-linecap="round">
+      <path d="M868 82 V70 M852 88 L844 80 M884 88 L892 80 M846 102 H836 M890 102 H900"/>
+    </g>"""
+    return "\n".join(beer_mug(*mug) for mug in mugs) + "\n" + sparkle
+
+
 def gang():
     # (x, y, scale) for Barney, Robin, Ted, Marshall, Lily; Ted leans in, Marshall is the tallest
     spots = [(590, 168, 1.17), (698, 172, 1.14), (800, 152, 1.24), (916, 150, 1.32), (1040, 176, 1.12)]
-    return "\n".join(gang_member(person, *spot) for person, spot in zip(GANG, spots))
+    people = "\n".join(gang_member(person, *spot) for person, spot in zip(GANG, spots))
+    return people + "\n" + beer_toast()
 
 
 def header(theme):
@@ -288,7 +313,7 @@ def header(theme):
     <path d="M948 128 C936 150 938 190 960 206" fill="none" stroke="#A8C6FA" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
   </g></g>"""
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hey, i'm borhan. Kids, let me tell you about the apps I built. Barney, Robin, Ted, Marshall and Lily from How I Met Your Mother.">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hey, i'm borhan. Kids, let me tell you about the apps I built. Barney, Robin, Ted, Marshall and Lily from How I Met Your Mother raising a toast.">
   <style>
     .tag {{ opacity: 0; animation: cycle 12s infinite; }}
     .tag1 {{ animation-delay: 4s; }}
@@ -305,6 +330,15 @@ def header(theme):
     .twinkle {{ animation: twinkle 4s ease-in-out infinite; }}
     @keyframes twinkle {{ 50% {{ opacity: 0.15; }} }}
     .cloud {{ animation: drift 60s linear infinite alternate; }}
+    .clink-left, .clink-right, .clink-middle {{ transform-box: fill-box; transform-origin: 50% 100%; animation: 2.4s ease-in-out infinite; }}
+    .clink-left {{ animation-name: clinkLeft; }}
+    .clink-right {{ animation-name: clinkRight; }}
+    .clink-middle {{ animation-name: clinkMiddle; }}
+    @keyframes clinkLeft {{ 0%, 60%, 100% {{ transform: rotate(0); }} 75% {{ transform: rotate(7deg); }} }}
+    @keyframes clinkRight {{ 0%, 60%, 100% {{ transform: rotate(0); }} 75% {{ transform: rotate(-7deg); }} }}
+    @keyframes clinkMiddle {{ 0%, 60%, 100% {{ transform: translateY(0); }} 75% {{ transform: translateY(-4px); }} }}
+    .sparkle {{ opacity: 0; animation: sparkle 2.4s ease-out infinite; }}
+    @keyframes sparkle {{ 0%, 70% {{ opacity: 0; }} 78% {{ opacity: 1; }} 100% {{ opacity: 0; }} }}
     @keyframes drift {{ to {{ transform: translateX(80px); }} }}
   </style>
   <defs>
