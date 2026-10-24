@@ -1,6 +1,6 @@
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg" width="100%" alt="Hey, I'm Borhan. Software developer who loves building apps."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg?v=90356d1d"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-light.svg?v=72328a1a"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg?v=90356d1d" width="100%" alt="Hey, I'm Borhan. Software developer who loves building apps."></picture>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-borhanrahimi.com-58A6FF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://borhanrahimi.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/borhanrahimi)
@@ -10,7 +10,7 @@
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-dark.svg" width="100%" alt="About Me"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-dark.svg?v=41c505b8"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-light.svg?v=8ec3d942"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-dark.svg?v=41c505b8" width="100%" alt="About Me"></picture>
 
 - Recent **CS grad** who loves building apps and working on projects
 - Interned at **Costco IT**, working in a large enterprise engineering environment
@@ -19,7 +19,7 @@
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg" width="100%" alt="Tech Stack"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg?v=58445909"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-light.svg?v=8b832746"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg?v=58445909" width="100%" alt="Tech Stack"></picture>
 
 <div align="center">
 
@@ -51,23 +51,23 @@
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-dark.svg" width="100%" alt="Featured Projects"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-dark.svg?v=2d92cd7a"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-light.svg?v=40f716f7"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-dark.svg?v=2d92cd7a" width="100%" alt="Featured Projects"></picture>
 
 <!--FEATURED_PROJECTS:start-->
 <table>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/borhanrahimi/linkwell"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-dark.svg" width="100%" alt="Linkwell project card"></picture></a>
+      <a href="https://github.com/borhanrahimi/linkwell"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-dark.svg?v=c6f11fc0"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-light.svg?v=bb9d1b04"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-dark.svg?v=c6f11fc0" width="100%" alt="Linkwell project card"></picture></a>
       <p align="center"><a href="https://linkwell-dypu.vercel.app/">Live demo</a> · <a href="https://github.com/borhanrahimi/linkwell">Code</a></p>
     </td>
     <td width="50%" valign="top">
-      <a href="https://github.com/borhanrahimi/file_organizer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-dark.svg" width="100%" alt="File Organizer project card"></picture></a>
+      <a href="https://github.com/borhanrahimi/file_organizer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-dark.svg?v=9941aa91"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-light.svg?v=a0b21503"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-dark.svg?v=9941aa91" width="100%" alt="File Organizer project card"></picture></a>
       <p align="center"><a href="https://github.com/borhanrahimi/file_organizer">Code</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <a href="https://github.com/borhanrahimi/borhan-portfolio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-dark.svg" width="100%" alt="Borhan Portfolio project card"></picture></a>
+      <a href="https://github.com/borhanrahimi/borhan-portfolio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-dark.svg?v=fb06fa42"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-light.svg?v=598b87df"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-dark.svg?v=fb06fa42" width="100%" alt="Borhan Portfolio project card"></picture></a>
       <p align="center"><a href="https://Borhanrahimi.com">Live demo</a> · <a href="https://github.com/borhanrahimi/borhan-portfolio">Code</a></p>
     </td>
   </tr>
@@ -76,7 +76,7 @@
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg" width="100%" alt="Recently Worked On"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-light.svg?v=342d0dfd"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd" width="100%" alt="Recently Worked On"></picture>
 
 <!--RECENT_PROJECTS:start-->
 **[Linkwell](https://github.com/borhanrahimi/linkwell)** · TypeScript
@@ -84,7 +84,7 @@
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg" width="100%" alt="GitHub Activity"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg?v=708467d8"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b" width="100%" alt="GitHub Activity"></picture>
 
 <div align="center">
 
@@ -95,28 +95,28 @@
 
 <br>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-dark.svg" width="100%" alt="Words I Build By"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-dark.svg?v=ff09aa2e"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-light.svg?v=d4904b95"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-dark.svg?v=ff09aa2e" width="100%" alt="Words I Build By"></picture>
 
 <div align="center">
 
 <table>
   <tr>
     <td align="center" width="33%" valign="top">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-dark.svg" width="110" alt="Steve Jobs caricature"></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-dark.svg?v=9bb46cb2"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-light.svg?v=00c0c884"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-dark.svg?v=9bb46cb2" width="110" alt="Steve Jobs caricature"></picture>
       <br><br>
       <i>"Stay hungry. Stay foolish."</i>
       <br><br>
       <b>Steve Jobs</b>
     </td>
     <td align="center" width="33%" valign="top">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-dark.svg" width="110" alt="Lionel Messi caricature"></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-dark.svg?v=9880927b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-light.svg?v=6351e2b7"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-dark.svg?v=9880927b" width="110" alt="Lionel Messi caricature"></picture>
       <br><br>
       <i>"I start early and I stay late, day after day, year after year. It took me 17 years and 114 days to become an overnight success."</i>
       <br><br>
       <b>Lionel Messi</b>
     </td>
     <td align="center" width="33%" valign="top">
-      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-dark.svg" width="110" alt="Ted Lasso caricature"></picture>
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-dark.svg?v=712d5b53"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-light.svg?v=d37bf1fd"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-dark.svg?v=712d5b53" width="110" alt="Ted Lasso caricature"></picture>
       <br><br>
       <i>"I believe in believe."</i>
       <br><br>

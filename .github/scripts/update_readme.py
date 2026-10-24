@@ -1,5 +1,7 @@
+import hashlib
 import json
 import os
+import re
 import shutil
 import urllib.request
 
@@ -279,6 +281,19 @@ with open(README_PATH, "r", encoding="utf-8") as file:
 
 content = replace_section(content, "FEATURED_PROJECTS", featured_block)
 content = replace_section(content, "RECENT_PROJECTS", recent_block)
+
+
+def add_version(match):
+    # GitHub caches images, so give each link a version that changes with the file
+    path = match.group(1)
+
+    with open(f"{ASSETS_DIR}/{path}", "rb") as file:
+        version = hashlib.sha1(file.read()).hexdigest()[:8]
+
+    return f"{ASSETS_URL}/{path}?v={version}"
+
+
+content = re.sub(re.escape(ASSETS_URL) + r"/([\w./-]+\.svg)(?:\?v=\w+)?", add_version, content)
 
 with open(README_PATH, "w", encoding="utf-8") as file:
     file.write(content)
