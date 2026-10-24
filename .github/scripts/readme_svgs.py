@@ -90,6 +90,90 @@ HEADER_SCENES = {
 }
 
 
+# The gang from How I Met Your Mother, drawn as simple busts in a 100 x 130 box
+GANG = [
+    {
+        # Barney: blond side part, suit and tie, smirk
+        "skin": "#F3CFB3",
+        "hair_back": "",
+        "hair": '<path d="M26 52 C24 30 36 22 52 22 C68 22 78 30 74 52 C72 42 66 36 58 34 C50 40 36 38 30 44 Z" fill="#E3C16F"/>',
+        "body": '<path d="M5 130 C8 100 26 92 50 92 C74 92 92 100 95 130 Z" fill="#1C1F2B"/>'
+                '<path d="M38 92 L50 116 L62 92 Z" fill="#FFFFFF"/>'
+                '<path d="M47 96 H53 L55 118 L50 125 L45 118 Z" fill="#7A1F33"/>'
+                '<path d="M38 92 L50 116 M62 92 L50 116" stroke="#2C3142" stroke-width="3"/>',
+        "mouth": '<path d="M43 71 Q52 76 60 67" fill="none" stroke="#8A4B3A" stroke-width="2.6" stroke-linecap="round"/>',
+        "brows": "#B8963E",
+    },
+    {
+        # Robin: long dark hair, beige blazer
+        "skin": "#F1CBB0",
+        "hair_back": '<path d="M22 60 C18 26 36 18 52 18 C70 18 84 30 80 62 C82 86 78 100 72 106 L28 106 C22 96 20 80 22 60 Z" fill="#3B2519"/>',
+        "hair": '<path d="M26 54 C28 30 46 24 60 26 C72 28 78 40 75 54 C68 40 54 34 42 38 C34 41 29 47 26 54 Z" fill="#3B2519"/>',
+        "body": '<path d="M5 130 C8 100 26 92 50 92 C74 92 92 100 95 130 Z" fill="#D9C7A4"/>'
+                '<path d="M38 93 Q50 110 62 93 Z" fill="#F4EBDD"/>'
+                '<path d="M36 94 L46 126 M64 94 L54 126" stroke="#BFAA84" stroke-width="3"/>',
+        "mouth": '<path d="M42 69 Q50 77 58 69" fill="none" stroke="#B34B4B" stroke-width="2.8" stroke-linecap="round"/>',
+        "brows": "#3B2519",
+    },
+    {
+        # Ted: dark spiky hair, brown jacket, big grin
+        "skin": "#EEC6A6",
+        "hair_back": "",
+        "hair": '<path d="M26 50 C22 30 32 20 44 18 L46 10 L53 17 L59 9 L62 18 L70 14 L69 23 C78 28 80 40 74 52 C70 40 62 34 50 35 C40 35 31 40 26 50 Z" fill="#2F1E14"/>',
+        "body": '<path d="M5 130 C8 100 26 92 50 92 C74 92 92 100 95 130 Z" fill="#4A3527"/>'
+                '<path d="M39 92 L50 112 L61 92 Z" fill="#2A2A33"/>'
+                '<path d="M39 92 L50 112 M61 92 L50 112" stroke="#5E4635" stroke-width="3"/>',
+        "mouth": '<path d="M40 68 Q50 81 60 68 Z" fill="#FFFFFF" stroke="#8A4B3A" stroke-width="2" stroke-linejoin="round"/>',
+        "brows": "#2F1E14",
+    },
+    {
+        # Marshall: light brown hair, broad face, grey jacket over a white tee
+        "skin": "#F2CDB2",
+        "hair_back": "",
+        "hair": '<path d="M25 52 C22 30 36 21 52 21 C68 21 80 30 76 52 C72 39 62 33 50 33 C39 33 30 39 25 52 Z" fill="#8A5A35"/>',
+        "body": '<path d="M3 130 C6 98 26 90 50 90 C74 90 94 98 97 130 Z" fill="#4B5563"/>'
+                '<path d="M36 91 Q50 104 64 91 L60 130 H40 Z" fill="#E9EDF2"/>',
+        "mouth": '<path d="M41 69 Q50 78 59 69" fill="none" stroke="#8A4B3A" stroke-width="2.8" stroke-linecap="round"/>',
+        "brows": "#7A4E2E",
+    },
+    {
+        # Lily: auburn hair, teal top, grin
+        "skin": "#F5D3BC",
+        "hair_back": '<path d="M23 60 C20 28 36 20 52 20 C70 20 82 30 79 60 C80 78 76 90 70 96 L30 96 C24 88 22 76 23 60 Z" fill="#B5472A"/>',
+        "hair": '<path d="M26 52 C30 30 50 24 64 28 C74 32 78 42 76 52 C70 42 62 38 54 38 C44 38 32 44 26 52 Z" fill="#B5472A"/>',
+        "body": '<path d="M5 130 C8 100 26 92 50 92 C74 92 92 100 95 130 Z" fill="#1F8A8A"/>'
+                '<path d="M38 93 Q50 108 62 93 Z" fill="#F5D3BC"/>',
+        "mouth": '<path d="M42 69 Q50 79 58 69 Z" fill="#FFFFFF" stroke="#B34B4B" stroke-width="2" stroke-linejoin="round"/>',
+        "brows": "#8E3A22",
+    },
+]
+
+
+def gang_member(person, x, y, scale):
+    p = person
+    return f"""    <g transform="translate({x} {y}) scale({scale})">
+      {p["hair_back"]}
+      {p["body"]}
+      <rect x="43" y="74" width="14" height="22" fill="{p["skin"]}"/>
+      <circle cx="26" cy="58" r="5" fill="{p["skin"]}"/>
+      <circle cx="74" cy="58" r="5" fill="{p["skin"]}"/>
+      <ellipse cx="50" cy="56" rx="24" ry="28" fill="{p["skin"]}"/>
+      {p["hair"]}
+      <path d="M37 49 Q42 46 47 48 M53 48 Q58 46 63 49" fill="none" stroke="{p["brows"]}" stroke-width="2.4" stroke-linecap="round"/>
+      <circle cx="42" cy="56" r="2.6" fill="#2A1A10"/>
+      <circle cx="58" cy="56" r="2.6" fill="#2A1A10"/>
+      <circle cx="36" cy="64" r="4" fill="#F2A08A" opacity="0.4"/>
+      <circle cx="64" cy="64" r="4" fill="#F2A08A" opacity="0.4"/>
+      {p["mouth"]}
+    </g>"""
+
+
+def gang():
+    # (x, y, scale) for Barney, Robin, Ted, Marshall, Lily; Ted leans in, Marshall is the tallest
+    spots = [(590, 168, 1.17), (698, 172, 1.14), (800, 152, 1.24), (916, 150, 1.32), (1040, 176, 1.12)]
+    return "\n".join(gang_member(person, *spot) for person, spot in zip(GANG, spots))
+
+
 def header(theme):
     t = THEMES[theme]
     s = HEADER_SCENES[theme]
@@ -138,10 +222,10 @@ def header(theme):
 
     if theme == "dark":
         glow_color = s["moon"]
-        sky = f"""    <circle cx="790" cy="70" r="90" fill="url(#glow)"/>
-    <circle cx="790" cy="70" r="26" fill="{s["moon"]}"/>
-    <circle cx="780" cy="62" r="5" fill="{s["sky_top"]}" opacity="0.12"/>
-    <circle cx="798" cy="80" r="3.5" fill="{s["sky_top"]}" opacity="0.12"/>"""
+        sky = f"""    <circle cx="660" cy="62" r="90" fill="url(#glow)"/>
+    <circle cx="660" cy="62" r="26" fill="{s["moon"]}"/>
+    <circle cx="650" cy="54" r="5" fill="{s["sky_top"]}" opacity="0.12"/>
+    <circle cx="668" cy="72" r="3.5" fill="{s["sky_top"]}" opacity="0.12"/>"""
 
         rain = "\n".join(
             f'    <line class="drop" x1="{dx}" y1="{dy}" x2="{dx - 4}" y2="{dy + 16}" stroke="{s["rain"]}" stroke-opacity="{rng.uniform(0.25, 0.6):.2f}" stroke-width="1.4" style="animation-delay: -{rng.uniform(0, 1.4):.2f}s; animation-duration: {rng.uniform(0.9, 1.4):.2f}s"/>'
@@ -151,24 +235,24 @@ def header(theme):
         # No rain under the umbrella
         weather = f"""  <mask id="dry">
     <rect width="1200" height="320" fill="#FFFFFF"/>
-    <path d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
+    <path transform="translate(1100 14) scale(0.52) translate(-1000 -42)" d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
   </mask>
   <g mask="url(#dry)">
 {rain}
   </g>"""
 
         # The yellow umbrella
-        prop = """  <g class="sway">
+        prop = """  <g class="sway"><g transform="translate(1100 14) scale(0.52) translate(-1000 -42)">
     <path d="M1000 150 V250 A12 12 0 0 1 976 250" fill="none" stroke="#3B2A1A" stroke-width="5" stroke-linecap="round"/>
     <path d="M906 150 A94 94 0 0 1 1094 150 Q1070.5 134 1047 150 Q1023.5 134 1000 150 Q976.5 134 953 150 Q929.5 134 906 150 Z" fill="url(#canopy)"/>
     <path d="M1000 56 Q972 90 953 150 M1000 56 Q1028 90 1047 150" fill="none" stroke="#D99A00" stroke-width="2"/>
     <path d="M1000 56 Q960 76 930 120" fill="none" stroke="#FFF3A8" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
     <line x1="1000" y1="56" x2="1000" y2="42" stroke="#3B2A1A" stroke-width="4" stroke-linecap="round"/>
-  </g>"""
+  </g></g>"""
     else:
         glow_color = s["sun"]
-        sky = f"""    <circle cx="790" cy="66" r="110" fill="url(#glow)"/>
-    <circle cx="790" cy="66" r="30" fill="{s["sun"]}"/>"""
+        sky = f"""    <circle cx="660" cy="62" r="110" fill="url(#glow)"/>
+    <circle cx="660" cy="62" r="30" fill="{s["sun"]}"/>"""
 
         clouds = []
         for cx, cy, size, speed in [(120, 52, 1.0, 60), (520, 34, 0.8, 75), (700, 120, 0.7, 90), (1080, 40, 0.9, 70)]:
@@ -184,7 +268,7 @@ def header(theme):
         weather = "  <g>\n" + "\n".join(clouds) + "\n  </g>"
 
         # The blue French horn
-        prop = """  <g class="sway">
+        prop = """  <g class="sway"><g transform="translate(1100 78) scale(0.5) translate(-1015 -185)">
     <circle cx="990" cy="168" r="62" fill="none" stroke="#1E4FB8" stroke-width="13"/>
     <circle cx="990" cy="168" r="62" fill="none" stroke="#3C7BF0" stroke-width="7"/>
     <circle cx="982" cy="176" r="36" fill="none" stroke="#1E4FB8" stroke-width="10"/>
@@ -202,9 +286,9 @@ def header(theme):
     <path d="M944 214 L912 246" stroke="#3C7BF0" stroke-width="6" stroke-linecap="round"/>
     <circle cx="909" cy="249" r="6" fill="#C9D3E3"/>
     <path d="M948 128 C936 150 938 190 960 206" fill="none" stroke="#A8C6FA" stroke-width="2.5" stroke-opacity="0.7" stroke-linecap="round"/>
-  </g>"""
+  </g></g>"""
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hey, i'm borhan. Kids, let me tell you about the apps I built.">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hey, i'm borhan. Kids, let me tell you about the apps I built. Barney, Robin, Ted, Marshall and Lily from How I Met Your Mother.">
   <style>
     .tag {{ opacity: 0; animation: cycle 12s infinite; }}
     .tag1 {{ animation-delay: 4s; }}
@@ -216,7 +300,7 @@ def header(theme):
     }}
     .drop {{ animation: fall 1.2s linear infinite; }}
     @keyframes fall {{ to {{ transform: translate(-20px, 340px); }} }}
-    .sway {{ transform-box: view-box; transform-origin: 1000px 262px; animation: sway 5s ease-in-out infinite; }}
+    .sway {{ transform-box: view-box; transform-origin: 1100px 128px; animation: sway 5s ease-in-out infinite; }}
     @keyframes sway {{ 0%, 100% {{ transform: rotate(-4deg); }} 50% {{ transform: rotate(4deg); }} }}
     .twinkle {{ animation: twinkle 4s ease-in-out infinite; }}
     @keyframes twinkle {{ 50% {{ opacity: 0.15; }} }}
@@ -241,7 +325,7 @@ def header(theme):
 {chr(10).join(windows)}
   </g>
 {weather}
-
+{gang()}
 {prop}
   </g>
   <rect x="0.5" y="0.5" width="1199" height="319" rx="20" fill="none" stroke="{t["border"]}"/>

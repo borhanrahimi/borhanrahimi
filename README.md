@@ -1,6 +1,6 @@
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg?v=66ab8e21"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-light.svg?v=2dc632e2"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg?v=66ab8e21" width="100%" alt="Hey, I'm Borhan. Software developer who loves building apps."></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg?v=089b92da"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-light.svg?v=1c1c3176"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg?v=089b92da" width="100%" alt="Hey, I'm Borhan. Software developer who loves building apps."></picture>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-borhanrahimi.com-58A6FF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://borhanrahimi.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/borhanrahimi)
