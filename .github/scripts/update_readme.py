@@ -1,64 +1,87 @@
+import datetime
 import json
 import os
+import shutil
 import urllib.request
 
+import readme_svgs
+
 USERNAME = os.environ["GITHUB_USERNAME"]
-TOKEN = os.environ["GITHUB_TOKEN"]
+TOKEN = os.environ.get("GITHUB_TOKEN", "")
 
 README_PATH = "README.md"
+ASSETS_DIR = "assets"
+ASSETS_URL = f"https://raw.githubusercontent.com/{USERNAME}/{USERNAME}/main/{ASSETS_DIR}"
 
 # Any repo with this topic shows up in Featured Projects
 FEATURED_TOPIC = "featured"
 
-MAX_RECENT_PROJECTS = 3
-MAX_ICONS = 6
+# Shown when no repo has the featured topic yet
+DEFAULT_FEATURED = ["linkwell", "file_organizer", "borhan-portfolio"]
 
-# GitHub topic (or language) -> skillicons.dev icon id
-ICONS = {
-    "python": "py",
-    "java": "java",
-    "kotlin": "kotlin",
-    "c": "c",
-    "cpp": "cpp",
-    "javascript": "js",
-    "typescript": "ts",
-    "html": "html",
-    "css": "css",
-    "react": "react",
-    "nextjs": "nextjs",
-    "vite": "vite",
-    "tailwind": "tailwind",
-    "tailwindcss": "tailwind",
-    "nodejs": "nodejs",
-    "node": "nodejs",
-    "express": "express",
-    "fastapi": "fastapi",
-    "flask": "flask",
-    "django": "django",
-    "tauri": "tauri",
-    "android": "androidstudio",
-    "postgres": "postgres",
-    "postgresql": "postgres",
-    "mysql": "mysql",
-    "mongodb": "mongodb",
-    "redis": "redis",
-    "prisma": "prisma",
-    "supabase": "supabase",
-    "firebase": "firebase",
-    "graphql": "graphql",
-    "docker": "docker",
-    "aws": "aws",
-    "vercel": "vercel",
-    "vitest": "vitest",
-    "jest": "jest",
+MAX_RECENT_PROJECTS = 3
+MAX_LANGUAGES = 5
+
+# Section titles in the README: (number, title, file name)
+SECTIONS = [
+    (1, "About Me", "about"),
+    (2, "Tech Stack", "tech-stack"),
+    (3, "Featured Projects", "projects"),
+    (4, "Recently Worked On", "recent"),
+    (5, "GitHub Activity", "activity"),
+    (6, "Words I Build By", "words"),
+]
+
+# GitHub topic -> label shown on a project card
+TOPIC_LABELS = {
+    "python": "Python",
+    "java": "Java",
+    "kotlin": "Kotlin",
+    "c": "C",
+    "cpp": "C++",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "html": "HTML",
+    "css": "CSS",
+    "react": "React",
+    "nextjs": "Next.js",
+    "vite": "Vite",
+    "tailwind": "Tailwind",
+    "tailwindcss": "Tailwind",
+    "nodejs": "Node.js",
+    "node": "Node.js",
+    "express": "Express",
+    "fastapi": "FastAPI",
+    "flask": "Flask",
+    "django": "Django",
+    "tauri": "Tauri",
+    "android": "Android",
+    "postgres": "PostgreSQL",
+    "postgresql": "PostgreSQL",
+    "mysql": "MySQL",
+    "mongodb": "MongoDB",
+    "redis": "Redis",
+    "prisma": "Prisma",
+    "supabase": "Supabase",
+    "firebase": "Firebase",
+    "graphql": "GraphQL",
+    "stripe": "Stripe",
+    "docker": "Docker",
+    "aws": "AWS",
+    "vercel": "Vercel",
+    "vitest": "Vitest",
+    "jest": "Jest",
+    "pytest": "pytest",
 }
 
 headers = {
     "Accept": "application/vnd.github+json",
-    "Authorization": f"Bearer {TOKEN}",
     "X-GitHub-Api-Version": "2022-11-28",
     "User-Agent": USERNAME,
 }
+
+if TOKEN:
+    headers["Authorization"] = f"Bearer {TOKEN}"
 
 
 def github_get(url):
@@ -68,10 +91,48 @@ def github_get(url):
         return json.load(response)
 
 
+def github_graphql(query, variables):
+    body = json.dumps({"query": query, "variables": variables}).encode()
+    request = urllib.request.Request("https://api.github.com/graphql", data=body, headers=headers)
+
+    with urllib.request.urlopen(request) as response:
+        result = json.load(response)
+
+    if "errors" in result:
+        raise RuntimeError(result["errors"])
+
+    return result["data"]
+
+
 def display_name(repo_name):
     # "file_organizer" -> "File Organizer", but keep "PicPick" and "RCP" as they are
     words = repo_name.replace("-", " ").replace("_", " ").split()
     return " ".join(word[0].upper() + word[1:] for word in words)
+
+
+def write_svg(path, svg):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+
+    with open(path, "w", encoding="utf-8") as file:
+        file.write(svg)
+
+
+def write_themed(path_without_theme, make_svg):
+    for theme in readme_svgs.THEMES:
+        write_svg(f"{path_without_theme}-{theme}.svg", make_svg(theme))
+
+
+def themed_picture(path_without_theme, alt, width):
+    dark = f"{ASSETS_URL}/{path_without_theme}-dark.svg"
+    light = f"{ASSETS_URL}/{path_without_theme}-light.svg"
+
+    return (
+        "<picture>"
+        f'<source media="(prefers-color-scheme: dark)" srcset="{dark}">'
+        f'<source media="(prefers-color-scheme: light)" srcset="{light}">'
+        f'<img src="{dark}" width="{width}" alt="{alt}">'
+        "</picture>"
+    )
 
 
 def replace_section(content, name, new_block):
@@ -90,70 +151,179 @@ def replace_section(content, name, new_block):
     return before + start_marker + "\n" + new_block + "\n" + end_marker + after
 
 
+all_repos = github_get(
+    f"https://api.github.com/users/{USERNAME}/repos?per_page=100&sort=pushed"
+)
+
+own_repos = [
+    repo for repo in all_repos
+    if not repo.get("fork") and repo["name"].lower() != USERNAME.lower()
+]
+
+repos_by_name = {repo["name"]: repo for repo in own_repos}
+
+
+# ---------- Header and section titles ----------
+
+write_themed(f"{ASSETS_DIR}/header", readme_svgs.header)
+
+for number, title, file_name in SECTIONS:
+    write_themed(
+        f"{ASSETS_DIR}/sections/{file_name}",
+        lambda theme: readme_svgs.section_title(number, title, theme),
+    )
+
+
 # ---------- Featured Projects ----------
 
-def project_card(repo):
-    name = display_name(repo["name"])
-    description = repo.get("description") or ""
-
-    icons = []
+def card_tags(repo):
+    tags = []
     for topic in repo.get("topics", []):
-        icon = ICONS.get(topic)
-        if icon and icon not in icons:
-            icons.append(icon)
+        label = TOPIC_LABELS.get(topic)
+        if label and label not in tags:
+            tags.append(label)
 
-    # Fall back to the repo's main language when no topics match an icon
-    if not icons and repo.get("language"):
-        icon = ICONS.get(repo["language"].lower())
-        if icon:
-            icons.append(icon)
+    # Fall back to the repo's main language when no topics match
+    if not tags and repo.get("language"):
+        tags.append(repo["language"])
 
-    lines = [
-        '    <td width="50%" valign="top">',
-        f'      <h3><a href="{repo["html_url"]}">{name}</a></h3>',
-        f"      {description}",
-    ]
+    return tags
 
-    if icons:
-        icon_ids = ",".join(icons[:MAX_ICONS])
-        lines += [
-            "      <br><br>",
-            f'      <img src="https://skillicons.dev/icons?i={icon_ids}&theme=dark" height="28" alt="{name} tech stack" />',
-        ]
+
+def project_cell(repo):
+    name = display_name(repo["name"])
+    picture = themed_picture(f"projects/{repo['name']}", f"{name} project card", "100%")
 
     links = []
     if repo.get("homepage"):
         links.append(f'<a href="{repo["homepage"]}">Live demo</a>')
     links.append(f'<a href="{repo["html_url"]}">Code</a>')
 
-    lines += [
-        "      <br><br>",
-        "      " + " · ".join(links),
-        "    </td>",
+    return (
+        '    <td width="50%" valign="top">\n'
+        f'      <a href="{repo["html_url"]}">{picture}</a>\n'
+        f'      <p align="center">{" · ".join(links)}</p>\n'
+        "    </td>"
+    )
+
+
+featured_repos = [repo for repo in own_repos if FEATURED_TOPIC in repo.get("topics", [])]
+
+if not featured_repos:
+    print(f"No repos tagged '{FEATURED_TOPIC}', showing the default projects.")
+    featured_repos = [repos_by_name[name] for name in DEFAULT_FEATURED if name in repos_by_name]
+
+# Start fresh so cards for repos that are no longer featured get removed
+shutil.rmtree(f"{ASSETS_DIR}/projects", ignore_errors=True)
+
+for repo in featured_repos:
+    write_themed(
+        f"{ASSETS_DIR}/projects/{repo['name']}",
+        lambda theme: readme_svgs.project_card(
+            display_name(repo["name"]),
+            repo.get("description") or "",
+            card_tags(repo),
+            bool(repo.get("homepage")),
+            theme,
+        ),
+    )
+
+rows = []
+
+# Two cards per row
+for i in range(0, len(featured_repos), 2):
+    cells = [project_cell(repo) for repo in featured_repos[i:i + 2]]
+    rows.append("  <tr>\n" + "\n".join(cells) + "\n  </tr>")
+
+featured_block = "<table>\n" + "\n".join(rows) + "\n</table>"
+
+
+# ---------- Stats card ----------
+
+def contribution_metrics():
+    today = datetime.date.today()
+
+    data = github_graphql(
+        """
+        query($login: String!, $yearStart: DateTime!) {
+          user(login: $login) {
+            thisYear: contributionsCollection(from: $yearStart) {
+              totalCommitContributions
+            }
+            contributionsCollection {
+              contributionCalendar {
+                totalContributions
+                weeks { contributionDays { date contributionCount } }
+              }
+            }
+          }
+        }
+        """,
+        {"login": USERNAME, "yearStart": f"{today.year}-01-01T00:00:00Z"},
+    )["user"]
+
+    calendar = data["contributionsCollection"]["contributionCalendar"]
+    days = [day for week in calendar["weeks"] for day in week["contributionDays"]]
+
+    longest = 0
+    running = 0
+    for day in days:
+        running = running + 1 if day["contributionCount"] else 0
+        longest = max(longest, running)
+
+    # Today not having a contribution yet doesn't break the streak
+    current = 0
+    for i, day in enumerate(reversed(days)):
+        if day["contributionCount"]:
+            current += 1
+        elif i > 0:
+            break
+
+    return [
+        (calendar["totalContributions"], "Contributions (last year)"),
+        (data["thisYear"]["totalCommitContributions"], f"Commits in {today.year}"),
+        (f"{current} days", "Current streak"),
+        (f"{longest} days", "Longest streak"),
     ]
 
-    return "\n".join(lines)
+
+def basic_metrics():
+    user = github_get(f"https://api.github.com/users/{USERNAME}")
+    live_projects = sum(1 for repo in own_repos if repo.get("homepage"))
+
+    return [
+        (len(own_repos), "Public repos"),
+        (len(language_bytes), "Languages used"),
+        (live_projects, "Live projects"),
+        (user.get("followers", 0), "Followers"),
+    ]
 
 
-def featured_block(repos):
-    rows = []
+language_bytes = {}
 
-    # Two cards per row
-    for i in range(0, len(repos), 2):
-        cards = [project_card(repo) for repo in repos[i:i + 2]]
-        rows.append("  <tr>\n" + "\n".join(cards) + "\n  </tr>")
+for repo in own_repos:
+    try:
+        for language, size in github_get(repo["languages_url"]).items():
+            language_bytes[language] = language_bytes.get(language, 0) + size
+    except Exception as error:
+        print(f"Could not load languages for {repo['name']}: {error}")
 
-    return "<table>\n" + "\n".join(rows) + "\n</table>"
+try:
+    metrics = contribution_metrics()
+except Exception as error:
+    # The contributions API needs a token, so fall back to public numbers
+    print(f"Could not load contributions: {error}")
+    metrics = basic_metrics()
 
+total_bytes = sum(language_bytes.values()) or 1
+top_languages = sorted(language_bytes.items(), key=lambda item: item[1], reverse=True)[:MAX_LANGUAGES]
+top_total = sum(size for _, size in top_languages) or 1
 
-all_repos = github_get(
-    f"https://api.github.com/users/{USERNAME}/repos?per_page=100&sort=pushed"
-)
+# Percentages of the top languages only, so the bar is always full
+languages = [(name, size * 100 / top_total) for name, size in top_languages]
 
-featured_repos = [
-    repo for repo in all_repos
-    if FEATURED_TOPIC in repo.get("topics", []) and not repo.get("fork")
-]
+updated = datetime.date.today().strftime("%b %d, %Y")
+write_themed(f"{ASSETS_DIR}/stats", lambda theme: readme_svgs.stats_card(metrics, languages, updated, theme))
 
 
 # ---------- Recently Worked On ----------
@@ -187,7 +357,6 @@ for event in events:
     if len(recent_repositories) >= MAX_RECENT_PROJECTS:
         break
 
-repos_by_name = {repo["name"]: repo for repo in all_repos}
 project_lines = []
 
 for repo_name in recent_repositories:
@@ -195,7 +364,7 @@ for repo_name in recent_repositories:
     language = repos_by_name.get(repo_name, {}).get("language")
 
     if language:
-        project_lines.append(f"**[{display_name(repo_name)}]({repo_url})** — {language}")
+        project_lines.append(f"**[{display_name(repo_name)}]({repo_url})** · {language}")
     else:
         project_lines.append(f"**[{display_name(repo_name)}]({repo_url})**")
 
@@ -211,12 +380,7 @@ recent_block = "\n".join(line + "  " for line in project_lines).rstrip()
 with open(README_PATH, "r", encoding="utf-8") as file:
     content = file.read()
 
-# Leave the current cards alone if nothing is tagged yet
-if featured_repos:
-    content = replace_section(content, "FEATURED_PROJECTS", featured_block(featured_repos))
-else:
-    print(f"No repos tagged '{FEATURED_TOPIC}', keeping current Featured Projects.")
-
+content = replace_section(content, "FEATURED_PROJECTS", featured_block)
 content = replace_section(content, "RECENT_PROJECTS", recent_block)
 
 with open(README_PATH, "w", encoding="utf-8") as file:

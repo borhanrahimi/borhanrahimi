@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 44" width="900" height="44" role="img" aria-label="Words I Build By">
+  <defs>
+    <linearGradient id="line" x1="0" x2="1"><stop offset="0" stop-color="#0969DA" stop-opacity="0.8"/><stop offset="1" stop-color="#8250DF" stop-opacity="0"/></linearGradient>
+  </defs>
+  <text x="0" y="29" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="14" fill="#0969DA">06</text>
+  <text x="34" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="700" fill="#1F2328">Words I Build By</text>
+  <rect x="275" y="21" width="625" height="1.5" fill="url(#line)"/>
+</svg>

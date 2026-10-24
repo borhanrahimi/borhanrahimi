@@ -1,12 +1,6 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:58A6FF&height=180&section=header&text=Hey,%20I'm%20Borhan&fontSize=44&fontColor=ffffff&fontAlignY=38&desc=CS%20Grad%20%C2%B7%20Software%20Developer&descSize=18&descAlignY=58" width="100%" alt="Hey, I'm Borhan" />
-
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2800&pause=1000&color=58A6FF&center=true&vCenter=true&width=450&lines=I+love+building+apps;Always+working+on+a+new+project;Web+%C2%B7+Desktop+%C2%B7+Mobile" alt="I love building apps · Always working on a new project" />
-
-<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" width="22" alt="Texas Flag" /> San Antonio, TX
-
-<br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/header-dark.svg" width="100%" alt="Hey, I'm Borhan. Software developer who loves building apps."></picture>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-borhanrahimi.com-58A6FF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://borhanrahimi.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/borhanrahimi)
@@ -14,119 +8,110 @@
 
 </div>
 
-## About Me
+<br>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/about-dark.svg" width="100%" alt="About Me"></picture>
 
 - Recent **CS grad** who loves building apps and working on projects
 - Interned at **Costco IT**, working in a large enterprise engineering environment
 - I build across the stack: web apps, desktop tools, and mobile
 - Always building something new, learning a new tool, or improving one of my projects
 
-## Tech Stack
+<br>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg" width="100%" alt="Tech Stack"></picture>
 
 <div align="center">
 
-**Languages**<br><br>
-<img src="https://skillicons.dev/icons?i=py,java,c,js,ts,html,css&perline=7" alt="Python, Java, C, JavaScript, TypeScript, HTML, CSS" />
+<sub><b>LANGUAGES</b></sub>
 
-<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=py%2Cjava%2Cc%2Cjs%2Cts%2Chtml%2Ccss&perline=7&theme=dark"><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=py%2Cjava%2Cc%2Cjs%2Cts%2Chtml%2Ccss&perline=7&theme=light"><img src="https://skillicons.dev/icons?i=py,java,c,js,ts,html,css&perline=7&theme=dark" alt="Python, Java, C, JavaScript, TypeScript, HTML, CSS"></picture>
 
-**Frontend**<br><br>
-<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite&perline=7" alt="React, Next.js, Tailwind CSS, Vite" />
+<sub><b>FRONTEND</b></sub>
 
-<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=react%2Cnextjs%2Ctailwind%2Cvite&perline=7&theme=dark"><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=react%2Cnextjs%2Ctailwind%2Cvite&perline=7&theme=light"><img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite&perline=7&theme=dark" alt="React, Next.js, Tailwind CSS, Vite"></picture>
 
-**Backend & Databases**<br><br>
-<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,mongodb&perline=7" alt="Node.js, Express, FastAPI, PostgreSQL, MySQL, MongoDB" />
+<sub><b>BACKEND & DATABASES</b></sub>
 
-<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=nodejs%2Cexpress%2Cfastapi%2Cpostgres%2Cmysql%2Cmongodb&perline=7&theme=dark"><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=nodejs%2Cexpress%2Cfastapi%2Cpostgres%2Cmysql%2Cmongodb&perline=7&theme=light"><img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,mongodb&perline=7&theme=dark" alt="Node.js, Express, FastAPI, PostgreSQL, MySQL, MongoDB"></picture>
 
-**Desktop & Mobile**<br><br>
-<img src="https://skillicons.dev/icons?i=tauri,androidstudio&perline=7" alt="Tauri, Android Studio" />
+<sub><b>DESKTOP & MOBILE</b></sub>
 
-<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=tauri%2Candroidstudio&perline=7&theme=dark"><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=tauri%2Candroidstudio&perline=7&theme=light"><img src="https://skillicons.dev/icons?i=tauri,androidstudio&perline=7&theme=dark" alt="Tauri, Android Studio"></picture>
 
-**DevOps, Cloud & Tools**<br><br>
-<img src="https://skillicons.dev/icons?i=git,docker,aws,vercel,vitest&perline=7" alt="Git, Docker, AWS, Vercel, Vitest" />
+<sub><b>DEVOPS, CLOUD & TOOLS</b></sub>
 
-<br><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://skillicons.dev/icons?i=git%2Cdocker%2Caws%2Cvercel%2Cvitest&perline=7&theme=dark"><source media="(prefers-color-scheme: light)" srcset="https://skillicons.dev/icons?i=git%2Cdocker%2Caws%2Cvercel%2Cvitest&perline=7&theme=light"><img src="https://skillicons.dev/icons?i=git,docker,aws,vercel,vitest&perline=7&theme=dark" alt="Git, Docker, AWS, Vercel, Vitest"></picture>
 
-**Observability**<br><br>
-<img src="https://img.shields.io/badge/Dynatrace-1496FF?style=for-the-badge&logo=dynatrace&logoColor=white" alt="Dynatrace" height="36" />
+<sub><b>OBSERVABILITY</b></sub>
+
+<img src="https://img.shields.io/badge/Dynatrace-1496FF?style=for-the-badge&logo=dynatrace&logoColor=white" alt="Dynatrace" height="32" />
 
 </div>
 
-## Featured Projects
+<br>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/projects-dark.svg" width="100%" alt="Featured Projects"></picture>
 
 <!--FEATURED_PROJECTS:start-->
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/borhanrahimi/linkwell">Linkwell</a></h3>
-      A smarter bookmark manager to save, organize, maintain, and rediscover links.
-      <br><br>
-      <img src="https://skillicons.dev/icons?i=nextjs,ts,tailwind,postgres&theme=dark" height="28" alt="Next.js, TypeScript, Tailwind, PostgreSQL" />
-      <br><br>
-      <a href="https://linkwell-dypu.vercel.app/">Live demo</a> · <a href="https://github.com/borhanrahimi/linkwell">Code</a>
+      <a href="https://github.com/borhanrahimi/linkwell"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/linkwell-dark.svg" width="100%" alt="Linkwell project card"></picture></a>
+      <p align="center"><a href="https://linkwell-dypu.vercel.app/">Live demo</a> · <a href="https://github.com/borhanrahimi/linkwell">Code</a></p>
     </td>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/borhanrahimi/file_organizer">File Organizer</a></h3>
-      Watches folders in real time, sorts files by type, cleans filenames, and safely handles duplicates.
-      <br><br>
-      <img src="https://skillicons.dev/icons?i=py,fastapi,tauri,react&theme=dark" height="28" alt="Python, FastAPI, Tauri, React" />
-      <br><br>
-      <a href="https://github.com/borhanrahimi/file_organizer">Code</a>
+      <a href="https://github.com/borhanrahimi/file_organizer"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/file_organizer-dark.svg" width="100%" alt="File Organizer project card"></picture></a>
+      <p align="center"><a href="https://github.com/borhanrahimi/file_organizer">Code</a></p>
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
-      <h3><a href="https://github.com/borhanrahimi/borhan-portfolio">Portfolio</a></h3>
-      My personal developer portfolio showcasing my projects, experience, and how to get in touch.
-      <br><br>
-      <img src="https://skillicons.dev/icons?i=nextjs,react,ts,tailwind&theme=dark" height="28" alt="Next.js, React, TypeScript, Tailwind" />
-      <br><br>
-      <a href="https://borhanrahimi.com">Live site</a> · <a href="https://github.com/borhanrahimi/borhan-portfolio">Code</a>
+      <a href="https://github.com/borhanrahimi/borhan-portfolio"><picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/projects/borhan-portfolio-dark.svg" width="100%" alt="Borhan Portfolio project card"></picture></a>
+      <p align="center"><a href="https://Borhanrahimi.com">Live demo</a> · <a href="https://github.com/borhanrahimi/borhan-portfolio">Code</a></p>
     </td>
   </tr>
 </table>
 <!--FEATURED_PROJECTS:end-->
 
-### Recently Worked On
+<br>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg" width="100%" alt="Recently Worked On"></picture>
 
 <!--RECENT_PROJECTS:start-->
-**[Linkwell](https://github.com/borhanrahimi/linkwell)** — TypeScript
+**[Linkwell](https://github.com/borhanrahimi/linkwell)** · TypeScript
 <!--RECENT_PROJECTS:end-->
 
-## GitHub Activity
+<br>
 
-<div align="center">
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg" width="100%" alt="GitHub Activity"></picture>
 
-<img src="https://github-readme-stats.vercel.app/api?username=borhanrahimi&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF" height="165" alt="GitHub Stats" />
-<img src="https://streak-stats.demolab.com?user=borhanrahimi&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" height="165" alt="GitHub Streak" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg" width="100%" alt="GitHub stats"></picture>
 
-</div>
+<br>
 
-## Words I Build By
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/words-dark.svg" width="100%" alt="Words I Build By"></picture>
 
 <div align="center">
 
 <table>
   <tr>
     <td align="center" width="33%" valign="top">
-      <img src="assets/steve-jobs.svg" width="110" alt="Steve Jobs caricature" />
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/steve-jobs-dark.svg" width="110" alt="Steve Jobs caricature"></picture>
       <br><br>
       <i>"Stay hungry. Stay foolish."</i>
       <br><br>
       <b>Steve Jobs</b>
     </td>
     <td align="center" width="33%" valign="top">
-      <img src="assets/messi.svg" width="110" alt="Lionel Messi caricature" />
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/messi-dark.svg" width="110" alt="Lionel Messi caricature"></picture>
       <br><br>
       <i>"I start early and I stay late, day after day, year after year. It took me 17 years and 114 days to become an overnight success."</i>
       <br><br>
       <b>Lionel Messi</b>
     </td>
     <td align="center" width="33%" valign="top">
-      <img src="assets/ted-lasso.svg" width="110" alt="Ted Lasso caricature" />
+      <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/avatars/ted-lasso-dark.svg" width="110" alt="Ted Lasso caricature"></picture>
       <br><br>
       <i>"I believe in believe."</i>
       <br><br>
@@ -142,7 +127,5 @@
 <br><br>
 
 **Keep building · Keep learning · Keep going**
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,100:0D1117&height=100&section=footer" width="100%" alt="" />
 
 </div>
