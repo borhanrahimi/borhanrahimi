@@ -2,7 +2,7 @@
 
 # Hey, I'm Borhan
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2800&pause=1000&color=58A6FF&center=true&vCenter=true&width=400&lines=CS+Grad+%C2%B7+Software+Developer" alt="CS Grad · Software Developer" />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2800&pause=1000&color=58A6FF&center=true&vCenter=true&width=450&lines=CS+Grad+%C2%B7+Software+Developer;I+love+building+apps;Always+working+on+a+new+project" alt="CS Grad · Software Developer · I love building apps" />
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Flag_of_Texas.svg" width="22" alt="Texas Flag" /> San Antonio, TX
 
@@ -15,11 +15,11 @@
 
 ## About Me
 
-Recent CS grad who enjoys building useful software and learning how systems work behind the scenes.
+Recent CS grad who loves building apps and working on projects, from web apps to desktop tools to mobile.
 
-I interned on Costco IT's Observability Platform Engineering team, gaining hands-on experience in a large enterprise engineering environment.
+I interned at **Costco IT**, gaining hands-on experience in a large enterprise engineering environment.
 
-Right now I'm focused on backend development, system design, observability, and building projects that solve real problems.
+When I'm not working, I'm usually building something new, learning a new tool, or improving one of my projects.
 
 ---
 
@@ -27,26 +27,28 @@ Right now I'm focused on backend development, system design, observability, and 
 
 <div align="center">
 
-**Languages** <br>
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
-![Java](https://img.shields.io/badge/Java-007396?style=flat-square&logo=openjdk&logoColor=white)
-![C](https://img.shields.io/badge/C-A8B9CC?style=flat-square&logo=c&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+**Languages**<br><br>
+<img src="https://skillicons.dev/icons?i=py,java,c,js,ts,html,css&perline=7" alt="Python, Java, C, JavaScript, TypeScript, HTML, CSS" />
 
-**Frameworks & Libraries** <br>
-![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+<br><br>
 
-**Dev Tools & Platforms** <br>
-![Git](https://img.shields.io/badge/Git-F05032?style=flat-square&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=flat-square&logo=visualstudiocode&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
-![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat-square&logo=amazonaws&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=flat-square&logo=jira&logoColor=white)
+**Frontend**<br><br>
+<img src="https://skillicons.dev/icons?i=react,nextjs,tailwind,vite&perline=7" alt="React, Next.js, Tailwind CSS, Vite" />
+
+<br><br>
+
+**Backend & Databases**<br><br>
+<img src="https://skillicons.dev/icons?i=nodejs,express,fastapi,postgres,mysql,mongodb&perline=7" alt="Node.js, Express, FastAPI, PostgreSQL, MySQL, MongoDB" />
+
+<br><br>
+
+**Desktop & Mobile**<br><br>
+<img src="https://skillicons.dev/icons?i=tauri,androidstudio&perline=7" alt="Tauri, Android Studio" />
+
+<br><br>
+
+**DevOps, Cloud & Tools**<br><br>
+<img src="https://skillicons.dev/icons?i=git,docker,aws,vercel,prometheus,grafana,vitest&perline=7" alt="Git, Docker, AWS, Vercel, Prometheus, Grafana, Vitest" />
 
 </div>
 
@@ -85,7 +87,7 @@ My personal developer portfolio showcasing my software engineering projects and 
 
 <div align="center">
 
-<img src="https://img.shields.io/badge/BELIEVE-FFDE00?style=for-the-badge&labelColor=FFDE00&color=FFDE00" alt="Believe" height="55"/>
+<img src="https://img.shields.io/badge/BELIEVE-FFDE00?style=for-the-badge&labelColor=FFDE00&color=FFDE00" alt="Believe" height="40"/>
 
 <br><br>
 
