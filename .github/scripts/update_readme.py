@@ -274,6 +274,26 @@ if not project_lines:
 recent_block = "\n".join(line + "  " for line in project_lines).rstrip()
 
 
+# ---------- Currently Building ----------
+
+def first_sentence(text):
+    # "Does X. Built with Y." -> "Does X."
+    sentence = text.split(". ")[0].strip()
+    return sentence if sentence.endswith(".") else sentence + "."
+
+
+if recent_repositories:
+    repo_name = recent_repositories[0]
+    repo_url = f"https://github.com/{USERNAME}/{repo_name}"
+    description = repos_by_name.get(repo_name, {}).get("description")
+
+    currently_block = f"**Currently building:** [{display_name(repo_name)}]({repo_url})"
+    if description:
+        currently_block += f" · {first_sentence(description)}"
+else:
+    currently_block = "**Currently building:** something new. Check back soon!"
+
+
 # ---------- Write README ----------
 
 with open(README_PATH, "r", encoding="utf-8") as file:
@@ -281,6 +301,7 @@ with open(README_PATH, "r", encoding="utf-8") as file:
 
 content = replace_section(content, "FEATURED_PROJECTS", featured_block)
 content = replace_section(content, "RECENT_PROJECTS", recent_block)
+content = replace_section(content, "CURRENTLY_BUILDING", currently_block)
 
 
 def add_version(match):

@@ -17,6 +17,10 @@
 - I build across the stack: web apps, desktop tools, and mobile
 - Always building something new, learning a new tool, or improving one of my projects
 
+<!--CURRENTLY_BUILDING:start-->
+**Currently building:** [Linkwell](https://github.com/borhanrahimi/linkwell) · A smarter bookmark manager that helps you save, organize, maintain, and rediscover links.
+<!--CURRENTLY_BUILDING:end-->
+
 <br>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg?v=58445909"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-light.svg?v=8b832746"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/tech-stack-dark.svg?v=58445909" width="100%" alt="Tech Stack"></picture>
