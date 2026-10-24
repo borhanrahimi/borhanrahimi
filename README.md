@@ -114,16 +114,22 @@
 <table>
   <tr>
     <td align="center" width="33%" valign="top">
+      <img src="assets/steve-jobs.svg" width="110" alt="Steve Jobs caricature" />
+      <br><br>
       <i>"Stay hungry. Stay foolish."</i>
       <br><br>
       <b>Steve Jobs</b>
     </td>
     <td align="center" width="33%" valign="top">
+      <img src="assets/messi.svg" width="110" alt="Lionel Messi caricature" />
+      <br><br>
       <i>"I start early and I stay late, day after day, year after year. It took me 17 years and 114 days to become an overnight success."</i>
       <br><br>
       <b>Lionel Messi</b>
     </td>
     <td align="center" width="33%" valign="top">
+      <img src="assets/ted-lasso.svg" width="110" alt="Ted Lasso caricature" />
+      <br><br>
       <i>"I believe in believe."</i>
       <br><br>
       <b>Ted Lasso</b>

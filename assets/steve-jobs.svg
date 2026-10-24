@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Steve Jobs caricature">
+  <defs>
+    <clipPath id="c"><circle cx="100" cy="100" r="96"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1B2433"/>
+      <stop offset="1" stop-color="#0D1117"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="98" fill="#58A6FF"/>
+  <g clip-path="url(#c)">
+    <rect width="200" height="200" fill="url(#bg)"/>
+    <!-- black turtleneck -->
+    <path d="M30 210 C34 168 62 152 100 152 C138 152 166 168 170 210 Z" fill="#262626" stroke="#4A4A4A" stroke-width="2"/>
+    <path d="M76 150 C78 162 122 162 124 150 L124 136 L76 136 Z" fill="#303030"/>
+    <path d="M78 146 Q100 154 122 146 M78 140 Q100 148 122 140" stroke="#474747" stroke-width="2" fill="none"/>
+    <!-- neck -->
+    <rect x="86" y="118" width="28" height="22" fill="#E2B593"/>
+    <!-- ears -->
+    <ellipse cx="60" cy="88" rx="8" ry="12" fill="#E8BE9C"/>
+    <ellipse cx="140" cy="88" rx="8" ry="12" fill="#E8BE9C"/>
+    <!-- long face -->
+    <ellipse cx="100" cy="82" rx="40" ry="50" fill="#F0C9A8"/>
+    <!-- receding grey hair at the sides -->
+    <path d="M60 80 C58 56 66 42 76 38 C72 52 70 66 68 84 Z" fill="#9A9A9A"/>
+    <path d="M140 80 C142 56 134 42 124 38 C128 52 130 66 132 84 Z" fill="#9A9A9A"/>
+    <path d="M76 38 C88 32 112 32 124 38 C114 36 86 36 76 38 Z" fill="#B0B0B0"/>
+    <!-- stubble -->
+    <path d="M62 92 C64 118 82 132 100 132 C118 132 136 118 138 92 C130 112 118 118 100 118 C82 118 70 112 62 92 Z" fill="#8C8C8C" opacity="0.55"/>
+    <path d="M84 106 Q100 100 116 106 Q100 112 84 106 Z" fill="#8C8C8C" opacity="0.5"/>
+    <!-- brows -->
+    <path d="M72 70 Q82 65 92 69" stroke="#6E6E6E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M108 69 Q118 65 128 70" stroke="#6E6E6E" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <!-- eyes -->
+    <circle cx="83" cy="82" r="3" fill="#2A2A2A"/>
+    <circle cx="117" cy="82" r="3" fill="#2A2A2A"/>
+    <!-- round rimless-style glasses -->
+    <circle cx="83" cy="82" r="13" fill="#FFFFFF" fill-opacity="0.08" stroke="#3A3A3A" stroke-width="2.5"/>
+    <circle cx="117" cy="82" r="13" fill="#FFFFFF" fill-opacity="0.08" stroke="#3A3A3A" stroke-width="2.5"/>
+    <path d="M96 81 Q100 78 104 81" stroke="#3A3A3A" stroke-width="2.5" fill="none"/>
+    <path d="M70 80 L61 78 M130 80 L139 78" stroke="#3A3A3A" stroke-width="2"/>
+    <!-- nose -->
+    <path d="M100 86 C98 96 96 98 94 100 Q100 103 105 100" stroke="#C99A78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <!-- slight smile -->
+    <path d="M88 112 Q100 119 112 112" stroke="#8A4B3A" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>
