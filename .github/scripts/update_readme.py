@@ -1,4 +1,3 @@
-import datetime
 import json
 import os
 import shutil
@@ -20,7 +19,6 @@ FEATURED_TOPIC = "featured"
 DEFAULT_FEATURED = ["linkwell", "file_organizer", "borhan-portfolio"]
 
 MAX_RECENT_PROJECTS = 3
-MAX_LANGUAGES = 5
 
 # Section titles in the README: (number, title, file name)
 SECTIONS = [
@@ -89,19 +87,6 @@ def github_get(url):
 
     with urllib.request.urlopen(request) as response:
         return json.load(response)
-
-
-def github_graphql(query, variables):
-    body = json.dumps({"query": query, "variables": variables}).encode()
-    request = urllib.request.Request("https://api.github.com/graphql", data=body, headers=headers)
-
-    with urllib.request.urlopen(request) as response:
-        result = json.load(response)
-
-    if "errors" in result:
-        raise RuntimeError(result["errors"])
-
-    return result["data"]
 
 
 def display_name(repo_name):
@@ -236,94 +221,6 @@ for i in range(0, len(featured_repos), 2):
     rows.append("  <tr>\n" + "\n".join(cells) + "\n  </tr>")
 
 featured_block = "<table>\n" + "\n".join(rows) + "\n</table>"
-
-
-# ---------- Stats card ----------
-
-def contribution_metrics():
-    today = datetime.date.today()
-
-    data = github_graphql(
-        """
-        query($login: String!, $yearStart: DateTime!) {
-          user(login: $login) {
-            thisYear: contributionsCollection(from: $yearStart) {
-              totalCommitContributions
-            }
-            contributionsCollection {
-              contributionCalendar {
-                totalContributions
-                weeks { contributionDays { date contributionCount } }
-              }
-            }
-          }
-        }
-        """,
-        {"login": USERNAME, "yearStart": f"{today.year}-01-01T00:00:00Z"},
-    )["user"]
-
-    calendar = data["contributionsCollection"]["contributionCalendar"]
-    days = [day for week in calendar["weeks"] for day in week["contributionDays"]]
-
-    longest = 0
-    running = 0
-    for day in days:
-        running = running + 1 if day["contributionCount"] else 0
-        longest = max(longest, running)
-
-    # Today not having a contribution yet doesn't break the streak
-    current = 0
-    for i, day in enumerate(reversed(days)):
-        if day["contributionCount"]:
-            current += 1
-        elif i > 0:
-            break
-
-    return [
-        (calendar["totalContributions"], "Contributions (last year)"),
-        (data["thisYear"]["totalCommitContributions"], f"Commits in {today.year}"),
-        (f"{current} days", "Current streak"),
-        (f"{longest} days", "Longest streak"),
-    ]
-
-
-def basic_metrics():
-    user = github_get(f"https://api.github.com/users/{USERNAME}")
-    live_projects = sum(1 for repo in own_repos if repo.get("homepage"))
-
-    return [
-        (len(own_repos), "Public repos"),
-        (len(language_bytes), "Languages used"),
-        (live_projects, "Live projects"),
-        (user.get("followers", 0), "Followers"),
-    ]
-
-
-language_bytes = {}
-
-for repo in own_repos:
-    try:
-        for language, size in github_get(repo["languages_url"]).items():
-            language_bytes[language] = language_bytes.get(language, 0) + size
-    except Exception as error:
-        print(f"Could not load languages for {repo['name']}: {error}")
-
-try:
-    metrics = contribution_metrics()
-except Exception as error:
-    # The contributions API needs a token, so fall back to public numbers
-    print(f"Could not load contributions: {error}")
-    metrics = basic_metrics()
-
-total_bytes = sum(language_bytes.values()) or 1
-top_languages = sorted(language_bytes.items(), key=lambda item: item[1], reverse=True)[:MAX_LANGUAGES]
-top_total = sum(size for _, size in top_languages) or 1
-
-# Percentages of the top languages only, so the bar is always full
-languages = [(name, size * 100 / top_total) for name, size in top_languages]
-
-updated = datetime.date.today().strftime("%b %d, %Y")
-write_themed(f"{ASSETS_DIR}/stats", lambda theme: readme_svgs.stats_card(metrics, languages, updated, theme))
 
 
 # ---------- Recently Worked On ----------

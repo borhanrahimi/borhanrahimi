@@ -32,23 +32,6 @@ THEMES = {
 SANS = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
 MONO = "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
 
-# Colors GitHub uses for each language
-LANGUAGE_COLORS = {
-    "TypeScript": "#3178C6",
-    "JavaScript": "#F1E05A",
-    "Python": "#3572A5",
-    "Java": "#B07219",
-    "Kotlin": "#A97BFF",
-    "C": "#555555",
-    "C++": "#F34B7D",
-    "HTML": "#E34C26",
-    "CSS": "#663399",
-    "Shell": "#89E051",
-    "Rust": "#DEA584",
-    "Go": "#00ADD8",
-}
-
-
 def text_width(text, size, bold=False):
     # Rough width of sans-serif text, good enough for laying things out
     return len(text) * size * (0.6 if bold else 0.55)
@@ -135,8 +118,17 @@ def header(theme):
   <text x="72" y="96" font-family="{MONO}" font-size="15" letter-spacing="3" fill="{t["accent"]}">SOFTWARE DEVELOPER · CS GRAD</text>
   <text x="70" y="168" font-family="{SANS}" font-size="64" font-weight="700" fill="url(#name)">Hey, I'm Borhan</text>
 {tagline_text}
-  <circle cx="78" cy="263" r="4" fill="{t["green"]}"/>
-  <text x="92" y="268" font-family="{SANS}" font-size="16" fill="{t["muted"]}">San Antonio, TX</text>
+  <g transform="translate(72 251) scale(1.3)">
+    <clipPath id="flag"><rect width="24" height="16" rx="2.5"/></clipPath>
+    <g clip-path="url(#flag)">
+      <rect width="24" height="8" fill="#FFFFFF"/>
+      <rect y="8" width="24" height="8" fill="#BF0A30"/>
+      <rect width="8" height="16" fill="#002868"/>
+      <polygon points="4.00,4.80 4.76,6.95 7.04,7.01 5.24,8.40 5.88,10.59 4.00,9.30 2.12,10.59 2.76,8.40 0.96,7.01 3.24,6.95" fill="#FFFFFF"/>
+    </g>
+    <rect x="0.5" y="0.5" width="23" height="15" rx="2.5" fill="none" stroke="{t["border"]}"/>
+  </g>
+  <text x="114" y="268" font-family="{SANS}" font-size="16" fill="{t["muted"]}">San Antonio, TX</text>
 
   <g transform="translate(730 58)">
     <rect width="400" height="204" rx="12" fill="{t["surface"]}" fill-opacity="0.92" stroke="{t["border"]}"/>
@@ -205,51 +197,5 @@ def project_card(name, description, tags, is_live, theme):
 {live_badge}
 {description_lines}
 {chr(10).join(pills)}
-</svg>
-"""
-
-
-def stats_card(metrics, languages, updated, theme):
-    """metrics: list of 4 (value, label). languages: list of (name, percent)."""
-    t = THEMES[theme]
-
-    metric_text = "\n".join(
-        f'  <text x="{28 + i * 211}" y="112" font-family="{SANS}" font-size="34" font-weight="700" fill="{t["text"]}">{escape(str(value))}</text>\n'
-        f'  <text x="{28 + i * 211}" y="138" font-family="{SANS}" font-size="14" fill="{t["muted"]}">{escape(label)}</text>'
-        for i, (value, label) in enumerate(metrics)
-    )
-
-    bar = []
-    legend = []
-    x = 28.0
-    legend_x = 28.0
-    bar_width = 900 - 56
-
-    for name, percent in languages:
-        color = LANGUAGE_COLORS.get(name, t["muted"])
-        width = bar_width * percent / 100
-        bar.append(f'    <rect x="{x:.1f}" y="172" width="{width:.1f}" height="10" fill="{color}"/>')
-        x += width
-
-        label = f"{name} {percent:.1f}%"
-        legend.append(
-            f'  <circle cx="{legend_x + 5:.0f}" cy="211" r="5" fill="{color}"/>\n'
-            f'  <text x="{legend_x + 16:.0f}" y="216" font-family="{SANS}" font-size="13" fill="{t["muted"]}">{escape(label)}</text>'
-        )
-        legend_x += 16 + text_width(label, 13) + 26
-
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 244" width="900" height="244" role="img" aria-label="GitHub stats">
-  <defs>
-    <clipPath id="bar"><rect x="28" y="172" width="{bar_width}" height="10" rx="5"/></clipPath>
-  </defs>
-  <rect x="0.5" y="0.5" width="899" height="243" rx="16" fill="{t["surface"]}" stroke="{t["border"]}"/>
-  <text x="28" y="44" font-family="{SANS}" font-size="16" font-weight="700" fill="{t["text"]}">GitHub at a glance</text>
-  <text x="872" y="44" text-anchor="end" font-family="{MONO}" font-size="12" fill="{t["muted"]}">updated {escape(updated)}</text>
-{metric_text}
-  <g clip-path="url(#bar)">
-    <rect x="28" y="172" width="{bar_width}" height="10" fill="{t["border"]}"/>
-{chr(10).join(bar)}
-  </g>
-{chr(10).join(legend)}
 </svg>
 """

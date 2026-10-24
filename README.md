@@ -86,7 +86,12 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg" width="100%" alt="GitHub Activity"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg" width="100%" alt="GitHub stats"></picture>
+<div align="center">
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=borhanrahimi&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF"><source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=borhanrahimi&show_icons=true&hide_border=true&bg_color=F6F8FA&title_color=0969DA&icon_color=0969DA&text_color=1F2328"><img src="https://github-readme-stats.vercel.app/api?username=borhanrahimi&show_icons=true&hide_border=true&theme=tokyonight&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF" height="165" alt="GitHub Stats"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&theme=tokyonight&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF"><source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&background=F6F8FA&ring=0969DA&fire=0969DA&currStreakLabel=0969DA&sideNums=1F2328&sideLabels=59636E&dates=59636E"><img src="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&theme=tokyonight&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" height="165" alt="GitHub Streak"></picture>
+
+</div>
 
 <br>
 
