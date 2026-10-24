@@ -1,5 +1,6 @@
 """SVG designs used in the profile README. Every function returns SVG text for one theme."""
 
+import random
 from xml.sax.saxutils import escape
 
 THEMES = {
@@ -58,67 +59,149 @@ def wrap(text, max_chars, max_lines):
     return lines
 
 
+# Night (dark) and dusk (light) colors for the How I Met Your Mother style header
+HEADER_SCENES = {
+    "dark": {
+        "sky_top": "#0B1026",
+        "sky_bottom": "#2A2350",
+        "moon": "#F4F1DE",
+        "building": "#060914",
+        "building_far": "#141A35",
+        "window": "#FFD86B",
+        "rain": "#9DB4FF",
+        "title": "#FFFFFF",
+        "narration": "#C9D1E8",
+        "tagline": "#FFD21F",
+        "label": "#9DB4FF",
+    },
+    "light": {
+        "sky_top": "#9CC3EA",
+        "sky_bottom": "#F6D9C4",
+        "moon": "#FFFFFF",
+        "building": "#2B3A55",
+        "building_far": "#6F84A8",
+        "window": "#FFE29A",
+        "rain": "#4C6A9C",
+        "title": "#14213D",
+        "narration": "#33415C",
+        "tagline": "#9A6A00",
+        "label": "#2F4B7C",
+    },
+}
+
+
 def header(theme):
     t = THEMES[theme]
-    taglines = ["I love building apps", "Always working on a new project", "Web · Desktop · Mobile"]
+    s = HEADER_SCENES[theme]
+    rng = random.Random(7)  # same "random" scene on every run, so the file only changes when the design does
+
+    taglines = [
+        "I love building apps",
+        "Always working on a new project",
+        "It's going to be legen… wait for it… dary!",
+    ]
 
     tagline_text = "\n".join(
-        f'  <text class="tag tag{i}" x="72" y="222" font-family="{SANS}" font-size="24" fill="{t["muted"]}">{escape(line)}</text>'
+        f'  <text class="tag tag{i}" x="72" y="236" font-family="{SANS}" font-size="20" font-weight="600" fill="{s["tagline"]}">{escape(line)}</text>'
         for i, line in enumerate(taglines)
     )
 
-    code = [
-        [("const ", t["accent2"]), ("borhan", t["orange"]), (" = {", t["text"])],
-        [("  loves", t["text"]), (": ", t["text"]), ('"building apps"', t["string"]), (",", t["text"])],
-        [("  stack", t["text"]), (": [", t["text"]), ('"TS"', t["string"]), (", ", t["text"]), ('"Python"', t["string"]), (", ", t["text"]), ('"Java"', t["string"]), ("],", t["text"])],
-        [("  basedIn", t["text"]), (": ", t["text"]), ('"San Antonio, TX"', t["string"]), (",", t["text"])],
-        [("  shipping", t["text"]), (": ", t["text"]), ("true", t["accent"]), (",", t["text"])],
-        [("};", t["text"])],
-    ]
+    # Skyline: low on the left so it stays behind the text, taller on the right
+    far_buildings = []
+    near_buildings = []
+    windows = []
 
-    code_text = "\n".join(
-        f'    <text x="24" y="{76 + i * 26}" font-family="{MONO}" font-size="15" xml:space="preserve">'
-        + "".join(f'<tspan fill="{color}">{escape(part)}</tspan>' for part, color in line)
-        + "</text>"
-        for i, line in enumerate(code)
+    x = 0
+    while x < 1200:
+        width = rng.randint(30, 60)
+        height = rng.randint(50, 110) if x > 640 else rng.randint(20, 45)
+        far_buildings.append(f'    <rect x="{x}" y="{300 - height}" width="{width}" height="{height + 20}" fill="{s["building_far"]}"/>')
+        x += width + rng.randint(0, 6)
+
+    x = -10
+    while x < 1200:
+        width = rng.randint(36, 74)
+        height = rng.randint(40, 95) if x > 660 else rng.randint(10, 32)
+        top = 320 - height
+        near_buildings.append(f'    <rect x="{x}" y="{top}" width="{width}" height="{height}" fill="{s["building"]}"/>')
+
+        for wy in range(top + 10, 312, 14):
+            for wx in range(x + 7, x + width - 8, 11):
+                if rng.random() < 0.22:
+                    twinkle = ' class="twinkle"' if rng.random() < 0.25 else ""
+                    delay = f' style="animation-delay: {rng.uniform(0, 6):.1f}s"' if twinkle else ""
+                    windows.append(f'    <rect{twinkle}{delay} x="{wx}" y="{wy}" width="5" height="6" fill="{s["window"]}" opacity="0.85"/>')
+        x += width + rng.randint(2, 10)
+
+    # Empire State style spire
+    spire = f"""    <path d="M1118 320 V214 H1128 V196 H1136 V170 H1140 V140 H1142 V170 H1146 V196 H1154 V214 H1164 V320 Z" fill="{s["building"]}"/>"""
+
+    rain = "\n".join(
+        f'    <line class="drop" x1="{dx}" y1="{dy}" x2="{dx - 4}" y2="{dy + 16}" stroke="{s["rain"]}" stroke-opacity="{rng.uniform(0.25, 0.6):.2f}" stroke-width="1.4" style="animation-delay: -{rng.uniform(0, 1.4):.2f}s; animation-duration: {rng.uniform(0.9, 1.4):.2f}s"/>'
+        for dx, dy in ((rng.randint(0, 1220), rng.randint(-340, 300)) for _ in range(110))
     )
 
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Hey, I'm Borhan. Software developer who loves building apps.">
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="hey, i'm borhan. Kids, let me tell you about the apps I built.">
   <style>
-    .tag {{ opacity: 0; animation: cycle 9s infinite; }}
-    .tag1 {{ animation-delay: 3s; }}
-    .tag2 {{ animation-delay: 6s; }}
+    .tag {{ opacity: 0; animation: cycle 12s infinite; }}
+    .tag1 {{ animation-delay: 4s; }}
+    .tag2 {{ animation-delay: 8s; }}
     @keyframes cycle {{
       0% {{ opacity: 0; }}
-      4%, 30% {{ opacity: 1; }}
-      34%, 100% {{ opacity: 0; }}
+      3%, 30% {{ opacity: 1; }}
+      33%, 100% {{ opacity: 0; }}
     }}
-    .cursor {{ animation: blink 1.1s steps(1) infinite; }}
-    @keyframes blink {{ 50% {{ opacity: 0; }} }}
-    .glow {{ animation: pulse 6s ease-in-out infinite; }}
-    @keyframes pulse {{ 50% {{ opacity: 0.55; }} }}
+    .drop {{ animation: fall 1.2s linear infinite; }}
+    @keyframes fall {{ to {{ transform: translate(-20px, 340px); }} }}
+    .umbrella {{ transform-box: view-box; transform-origin: 1000px 262px; animation: sway 5s ease-in-out infinite; }}
+    @keyframes sway {{ 0%, 100% {{ transform: rotate(-4deg); }} 50% {{ transform: rotate(4deg); }} }}
+    .twinkle {{ animation: twinkle 4s ease-in-out infinite; }}
+    @keyframes twinkle {{ 50% {{ opacity: 0.15; }} }}
   </style>
   <defs>
     <clipPath id="frame"><rect width="1200" height="320" rx="20"/></clipPath>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0 H0 V40" fill="none" stroke="{t["accent"]}" stroke-opacity="0.08"/>
-    </pattern>
-    <radialGradient id="glow1"><stop offset="0" stop-color="{t["accent"]}" stop-opacity="0.35"/><stop offset="1" stop-color="{t["accent"]}" stop-opacity="0"/></radialGradient>
-    <radialGradient id="glow2"><stop offset="0" stop-color="{t["accent2"]}" stop-opacity="0.3"/><stop offset="1" stop-color="{t["accent2"]}" stop-opacity="0"/></radialGradient>
-    <linearGradient id="name" x1="0" x2="1"><stop offset="0" stop-color="{t["text"]}"/><stop offset="1" stop-color="{t["accent"]}"/></linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{s["sky_top"]}"/><stop offset="1" stop-color="{s["sky_bottom"]}"/></linearGradient>
+    <radialGradient id="moonGlow"><stop offset="0" stop-color="{s["moon"]}" stop-opacity="0.35"/><stop offset="1" stop-color="{s["moon"]}" stop-opacity="0"/></radialGradient>
+    <linearGradient id="canopy" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE14D"/><stop offset="1" stop-color="#F5B800"/></linearGradient>
+    <!-- no rain under the umbrella -->
+    <mask id="dry">
+      <rect width="1200" height="320" fill="#FFFFFF"/>
+      <path d="M906 150 Q1000 140 1094 150 L1110 320 L890 320 Z" fill="#000000"/>
+    </mask>
   </defs>
   <g clip-path="url(#frame)">
-    <rect width="1200" height="320" fill="{t["bg"]}"/>
-    <rect width="1200" height="320" fill="url(#grid)"/>
-    <circle class="glow" cx="930" cy="70" r="340" fill="url(#glow1)"/>
-    <circle class="glow" cx="1150" cy="330" r="300" fill="url(#glow2)" style="animation-delay: 3s"/>
+    <rect width="1200" height="320" fill="url(#sky)"/>
+    <circle cx="790" cy="70" r="90" fill="url(#moonGlow)"/>
+    <circle cx="790" cy="70" r="26" fill="{s["moon"]}"/>
+    <circle cx="780" cy="62" r="5" fill="{s["sky_top"]}" opacity="0.12"/>
+    <circle cx="798" cy="80" r="3.5" fill="{s["sky_top"]}" opacity="0.12"/>
+  <g>
+{chr(10).join(far_buildings)}
+  </g>
+  <g>
+{chr(10).join(near_buildings)}
+{spire}
+{chr(10).join(windows)}
+  </g>
+  <g mask="url(#dry)">
+{rain}
+  </g>
+
+  <g class="umbrella">
+    <path d="M1000 150 V250 A12 12 0 0 1 976 250" fill="none" stroke="#3B2A1A" stroke-width="5" stroke-linecap="round"/>
+    <path d="M906 150 A94 94 0 0 1 1094 150 Q1070.5 134 1047 150 Q1023.5 134 1000 150 Q976.5 134 953 150 Q929.5 134 906 150 Z" fill="url(#canopy)"/>
+    <path d="M1000 56 Q972 90 953 150 M1000 56 Q1028 90 1047 150" fill="none" stroke="#D99A00" stroke-width="2"/>
+    <path d="M1000 56 Q960 76 930 120" fill="none" stroke="#FFF3A8" stroke-width="3" stroke-opacity="0.6" stroke-linecap="round"/>
+    <line x1="1000" y1="56" x2="1000" y2="42" stroke="#3B2A1A" stroke-width="4" stroke-linecap="round"/>
+  </g>
   </g>
   <rect x="0.5" y="0.5" width="1199" height="319" rx="20" fill="none" stroke="{t["border"]}"/>
 
-  <text x="72" y="96" font-family="{MONO}" font-size="15" letter-spacing="3" fill="{t["accent"]}">SOFTWARE DEVELOPER · CS GRAD</text>
-  <text x="70" y="168" font-family="{SANS}" font-size="64" font-weight="700" fill="url(#name)">Hey, I'm Borhan</text>
+  <text x="72" y="84" font-family="{MONO}" font-size="14" letter-spacing="3" fill="{s["label"]}">SOFTWARE DEVELOPER · CS GRAD</text>
+  <text x="68" y="152" font-family="{SANS}" font-size="66" font-weight="800" letter-spacing="-1.5" fill="{s["title"]}">hey, i'm borhan</text>
+  <text x="72" y="194" font-family="Georgia, 'Times New Roman', serif" font-size="21" font-style="italic" fill="{s["narration"]}">Kids, let me tell you about the apps I built…</text>
 {tagline_text}
-  <g transform="translate(72 251) scale(1.3)">
+  <g transform="translate(72 253) scale(1.3)">
     <clipPath id="flag"><rect width="24" height="16" rx="2.5"/></clipPath>
     <g clip-path="url(#flag)">
       <rect width="24" height="8" fill="#FFFFFF"/>
@@ -126,20 +209,8 @@ def header(theme):
       <rect width="8" height="16" fill="#002868"/>
       <polygon points="4.00,4.80 4.76,6.95 7.04,7.01 5.24,8.40 5.88,10.59 4.00,9.30 2.12,10.59 2.76,8.40 0.96,7.01 3.24,6.95" fill="#FFFFFF"/>
     </g>
-    <rect x="0.5" y="0.5" width="23" height="15" rx="2.5" fill="none" stroke="{t["border"]}"/>
   </g>
-  <text x="114" y="268" font-family="{SANS}" font-size="16" fill="{t["muted"]}">San Antonio, TX</text>
-
-  <g transform="translate(730 58)">
-    <rect width="400" height="204" rx="12" fill="{t["surface"]}" fill-opacity="0.92" stroke="{t["border"]}"/>
-    <circle cx="22" cy="22" r="5" fill="#FF5F57"/>
-    <circle cx="40" cy="22" r="5" fill="#FEBC2E"/>
-    <circle cx="58" cy="22" r="5" fill="#28C840"/>
-    <text x="200" y="27" text-anchor="middle" font-family="{MONO}" font-size="12" fill="{t["muted"]}">borhan.ts</text>
-    <path d="M0 42 H400" stroke="{t["border"]}"/>
-{code_text}
-    <rect class="cursor" x="48" y="194" width="9" height="3" fill="{t["accent"]}"/>
-  </g>
+  <text x="114" y="270" font-family="{SANS}" font-size="16" font-weight="600" fill="{s["narration"]}">San Antonio, TX</text>
 </svg>
 """
 
