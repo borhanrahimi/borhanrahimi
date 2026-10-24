@@ -57,6 +57,7 @@
 
 ## Featured Projects
 
+<!--FEATURED_PROJECTS:start-->
 <table>
   <tr>
     <td width="50%" valign="top">
@@ -85,18 +86,15 @@
       <br><br>
       <a href="https://borhanrahimi.com">Live site</a> · <a href="https://github.com/borhanrahimi/borhan-portfolio">Code</a>
     </td>
-    <td width="50%" valign="top">
-      <h3>Recently Worked On</h3>
-      Updated automatically from my latest pushes.
-      <br><br>
+  </tr>
+</table>
+<!--FEATURED_PROJECTS:end-->
+
+### Recently Worked On
 
 <!--RECENT_PROJECTS:start-->
 **[Linkwell](https://github.com/borhanrahimi/linkwell)** — TypeScript
 <!--RECENT_PROJECTS:end-->
-
-  </td>
-  </tr>
-</table>
 
 ## GitHub Activity
 
