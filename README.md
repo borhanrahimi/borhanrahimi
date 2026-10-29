@@ -18,7 +18,7 @@
 - Always building something new, learning a new tool, or improving one of my projects
 
 <!--CURRENTLY_BUILDING:start-->
-**Currently building:** [Costco Game](https://github.com/borhanrahimi/Costco_Game)
+**Currently building:** [PicPick](https://github.com/borhanrahimi/PicPick) · Android photo organizer built with Java and Material 3.
 <!--CURRENTLY_BUILDING:end-->
 
 <br>
@@ -83,9 +83,9 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-light.svg?v=342d0dfd"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd" width="100%" alt="Recently Worked On"></picture>
 
 <!--RECENT_PROJECTS:start-->
-**[Costco Game](https://github.com/borhanrahimi/Costco_Game)** · JavaScript  
-**[Linkwell](https://github.com/borhanrahimi/linkwell)** · TypeScript  
-**[NetGuard](https://github.com/borhanrahimi/NetGuard)** · Python
+**[PicPick](https://github.com/borhanrahimi/PicPick)** · Java  
+**[NetGuard](https://github.com/borhanrahimi/NetGuard)** · Python  
+**[Costco Game](https://github.com/borhanrahimi/Costco_Game)** · JavaScript
 <!--RECENT_PROJECTS:end-->
 
 <br>
