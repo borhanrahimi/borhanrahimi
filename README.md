@@ -18,7 +18,7 @@
 - Always building something new, learning a new tool, or improving one of my projects
 
 <!--CURRENTLY_BUILDING:start-->
-**Currently building:** [PicPick](https://github.com/borhanrahimi/PicPick) · Android photo organizer built with Java and Material 3.
+**Currently building:** [File Organizer](https://github.com/borhanrahimi/file_organizer) · Automatically organizes and renames files as they're downloaded, using Python and real-time folder watching.
 <!--CURRENTLY_BUILDING:end-->
 
 <br>
@@ -83,9 +83,9 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-light.svg?v=342d0dfd"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd" width="100%" alt="Recently Worked On"></picture>
 
 <!--RECENT_PROJECTS:start-->
+**[File Organizer](https://github.com/borhanrahimi/file_organizer)** · Python  
 **[PicPick](https://github.com/borhanrahimi/PicPick)** · Java  
-**[NetGuard](https://github.com/borhanrahimi/NetGuard)** · Python  
-**[Costco Game](https://github.com/borhanrahimi/Costco_Game)** · JavaScript
+**[NetGuard](https://github.com/borhanrahimi/NetGuard)** · Python
 <!--RECENT_PROJECTS:end-->
 
 <br>
