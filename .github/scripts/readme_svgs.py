@@ -499,3 +499,27 @@ def project_card(name, description, tags, is_live, theme):
 {chr(10).join(pills)}
 </svg>
 """
+
+
+def stats_card(stats, theme):
+    # stats: list of (label, value) pairs, shown in two columns
+    t = THEMES[theme]
+    rows = []
+
+    for i, (label, value) in enumerate(stats):
+        column, row = divmod(i, 3)
+        x = 28 + column * 232
+        y = 78 + row * 30
+        rows.append(
+            f'  <circle cx="{x + 4}" cy="{y - 5}" r="4" fill="{t["accent"]}"/>\n'
+            f'  <text x="{x + 18}" y="{y}" font-family="{SANS}" font-size="14" fill="{t["muted"]}">{escape(label)}</text>\n'
+            f'  <text x="{x + 212}" y="{y}" text-anchor="end" font-family="{MONO}" font-size="15" font-weight="700" fill="{t["text"]}">{value:,}</text>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195" role="img" aria-label="GitHub Stats">
+  <rect x="0.5" y="0.5" width="494" height="194" rx="12" fill="{t["surface"]}" stroke="{t["border"]}"/>
+  <text x="28" y="40" font-family="{SANS}" font-size="18" font-weight="700" fill="{t["accent"]}">GitHub Stats</text>
+{chr(10).join(rows)}
+  <text x="28" y="172" font-family="{SANS}" font-size="11" fill="{t["muted"]}">Commits are from the last 12 months · updated daily</text>
+</svg>
+"""

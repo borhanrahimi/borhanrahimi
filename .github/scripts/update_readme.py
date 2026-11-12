@@ -225,6 +225,47 @@ for i in range(0, len(featured_repos), 2):
 featured_block = "<table>\n" + "\n".join(rows) + "\n</table>"
 
 
+# ---------- GitHub Stats ----------
+
+def github_graphql(query):
+    request = urllib.request.Request(
+        "https://api.github.com/graphql",
+        data=json.dumps({"query": query}).encode(),
+        headers=headers,
+    )
+
+    with urllib.request.urlopen(request) as response:
+        result = json.load(response)
+
+    if "errors" in result:
+        raise RuntimeError(result["errors"])
+
+    return result["data"]
+
+
+user_stats = github_graphql(f"""{{
+  user(login: "{USERNAME}") {{
+    pullRequests {{ totalCount }}
+    issues {{ totalCount }}
+    repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, ISSUE]) {{ totalCount }}
+    contributionsCollection {{ totalCommitContributions restrictedContributionsCount }}
+  }}
+}}""")["user"]
+
+contributions = user_stats["contributionsCollection"]
+
+stats = [
+    ("Total Stars", sum(repo["stargazers_count"] for repo in own_repos)),
+    ("Commits", contributions["totalCommitContributions"] + contributions["restrictedContributionsCount"]),
+    ("Pull Requests", user_stats["pullRequests"]["totalCount"]),
+    ("Issues", user_stats["issues"]["totalCount"]),
+    ("Public Repos", len(own_repos)),
+    ("Contributed To", user_stats["repositoriesContributedTo"]["totalCount"]),
+]
+
+write_themed(f"{ASSETS_DIR}/stats", lambda theme: readme_svgs.stats_card(stats, theme))
+
+
 # ---------- Recently Worked On ----------
 
 events = github_get(
