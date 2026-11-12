@@ -523,3 +523,126 @@ def stats_card(stats, theme):
   <text x="28" y="172" font-family="{SANS}" font-size="11" fill="{t["muted"]}">Commits are from the last 12 months · updated daily</text>
 </svg>
 """
+
+
+def heatmap(weeks, total, theme):
+    # weeks: list of weeks, each a list of (date "YYYY-MM-DD", count, weekday 0=Sun)
+    t = THEMES[theme]
+    cell, gap = 13, 2
+    left, top = 52, 74
+    counts = sorted(count for week in weeks for _, count, _ in week if count)
+
+    # Split active days into four even groups, like GitHub does
+    cutoffs = [counts[int(len(counts) * f) - 1] for f in (0.25, 0.5, 0.75)] if counts else []
+
+    def level(count):
+        if not count:
+            return 0
+        return 1 + sum(count > cutoff for cutoff in cutoffs)
+
+    opacity = {1: 0.3, 2: 0.55, 3: 0.8, 4: 1}
+
+    def square(x, y, lvl, tooltip=""):
+        if lvl == 0:
+            fill = f'fill="{t["border"]}" fill-opacity="0.55"'
+        else:
+            fill = f'fill="{t["accent"]}" fill-opacity="{opacity[lvl]}"'
+        rect = f'<rect x="{x}" y="{y}" width="{cell}" height="{cell}" rx="3" {fill}'
+        return f"{rect}><title>{tooltip}</title></rect>" if tooltip else f"{rect}/>"
+
+    squares, months = [], []
+    month_names = "Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec".split()
+    last_month, last_label_x = None, -100
+
+    for column, week in enumerate(weeks):
+        x = left + column * (cell + gap)
+        month = int(week[0][0][5:7])
+        if month != last_month and x - last_label_x > 30:
+            months.append(f'<text x="{x}" y="{top - 10}" font-family="{SANS}" font-size="11" fill="{t["muted"]}">{month_names[month - 1]}</text>')
+            last_label_x = x
+        last_month = month
+
+        for date, count, weekday in week:
+            label = f"{count} contribution{'s' if count != 1 else ''} on {date}"
+            squares.append("  " + square(x, top + weekday * (cell + gap), level(count), label))
+
+    days = "".join(
+        f'<text x="{left - 10}" y="{top + row * (cell + gap) + 10.5}" text-anchor="end" font-family="{SANS}" font-size="11" fill="{t["muted"]}">{name}</text>'
+        for row, name in ((1, "Mon"), (3, "Wed"), (5, "Fri"))
+    )
+
+    legend_y = top + 7 * (cell + gap) + 12
+    legend_x = 900 - 28 - 5 * (cell + 3) - 34
+    legend = (
+        f'<text x="{legend_x - 8}" y="{legend_y + 10.5}" text-anchor="end" font-family="{SANS}" font-size="11" fill="{t["muted"]}">Less</text>'
+        + "".join(square(legend_x + i * (cell + 3), legend_y, i) for i in range(5))
+        + f'<text x="{legend_x + 5 * (cell + 3) + 5}" y="{legend_y + 10.5}" font-family="{SANS}" font-size="11" fill="{t["muted"]}">More</text>'
+    )
+
+    height = legend_y + cell + 22
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 {height}" width="900" height="{height}" role="img" aria-label="{total:,} contributions in the last year">
+  <rect x="0.5" y="0.5" width="899" height="{height - 1}" rx="12" fill="{t["surface"]}" stroke="{t["border"]}"/>
+  <text x="28" y="38" font-family="{SANS}" font-size="18" font-weight="700" fill="{t["text"]}"><tspan fill="{t["accent"]}">{total:,}</tspan> contributions in the last year</text>
+  {"".join(months)}
+  {days}
+{chr(10).join(squares)}
+  {legend}
+</svg>
+"""
+
+
+def languages_card(languages, theme):
+    # languages: list of (name, share 0-1, color), biggest first
+    t = THEMES[theme]
+    bar_x, bar_width = 28, 439
+    segments, legend = [], []
+    x = bar_x
+
+    for i, (name, share, color) in enumerate(languages):
+        width = bar_width * share
+        segments.append(f'<rect x="{x:.2f}" y="62" width="{width + 0.5:.2f}" height="10" fill="{color}"/>')
+        x += width
+
+        column, row = divmod(i, 3)
+        lx = 28 + column * 232
+        ly = 106 + row * 28
+        legend.append(
+            f'  <circle cx="{lx + 5}" cy="{ly - 5}" r="5" fill="{color}"/>\n'
+            f'  <text x="{lx + 18}" y="{ly}" font-family="{SANS}" font-size="14" fill="{t["text"]}">{escape(name)}</text>\n'
+            f'  <text x="{lx + 212}" y="{ly}" text-anchor="end" font-family="{MONO}" font-size="13" fill="{t["muted"]}">{share * 100:.1f}%</text>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195" role="img" aria-label="Top languages: {escape(', '.join(name for name, _, _ in languages))}">
+  <defs><clipPath id="bar"><rect x="{bar_x}" y="62" width="{bar_width}" height="10" rx="5"/></clipPath></defs>
+  <rect x="0.5" y="0.5" width="494" height="194" rx="12" fill="{t["surface"]}" stroke="{t["border"]}"/>
+  <text x="28" y="40" font-family="{SANS}" font-size="18" font-weight="700" fill="{t["accent"]}">Top Languages</text>
+  <g clip-path="url(#bar)">{"".join(segments)}</g>
+{chr(10).join(legend)}
+  <text x="28" y="182" font-family="{SANS}" font-size="11" fill="{t["muted"]}">By code size across my public repos</text>
+</svg>
+"""
+
+
+def rhythm_card(weekday_totals, headline, theme):
+    # weekday_totals: 7 numbers, Monday first
+    t = THEMES[theme]
+    names = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+    biggest = max(weekday_totals) or 1
+    bars = []
+
+    for i, total in enumerate(weekday_totals):
+        x = 40 + i * 62
+        height = max(4, 82 * total / biggest)
+        is_top = total == biggest and total > 0
+        bars.append(
+            f'  <rect x="{x}" y="{156 - height:.1f}" width="38" height="{height:.1f}" rx="5" fill="{t["accent"]}" fill-opacity="{1 if is_top else 0.35}"><title>{names[i]}: {total} contributions</title></rect>\n'
+            f'  <text x="{x + 19}" y="176" text-anchor="middle" font-family="{SANS}" font-size="12" font-weight="{700 if is_top else 400}" fill="{t["text"] if is_top else t["muted"]}">{names[i]}</text>'
+        )
+
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195" role="img" aria-label="Weekly rhythm. {escape(headline)}">
+  <rect x="0.5" y="0.5" width="494" height="194" rx="12" fill="{t["surface"]}" stroke="{t["border"]}"/>
+  <text x="28" y="40" font-family="{SANS}" font-size="18" font-weight="700" fill="{t["accent"]}">Weekly Rhythm</text>
+  <text x="467" y="40" text-anchor="end" font-family="{SANS}" font-size="13" fill="{t["muted"]}">{escape(headline)}</text>
+{chr(10).join(bars)}
+</svg>
+"""

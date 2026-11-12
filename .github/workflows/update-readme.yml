@@ -16,6 +16,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # Runs first: the README script versions every SVG it links to
+      - name: Generate contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: borhanrahimi
+          outputs: |
+            assets/snake-light.svg?color_snake=#0969DA&color_dots=#EBEDF0,#B6D4F5,#7FB2EE,#3D8AE4,#0969DA
+            assets/snake-dark.svg?color_snake=#58A6FF&color_dots=#21262D,#173A5E,#1F5591,#3A7FD0,#58A6FF
+
       - name: Update Featured Projects and Recently Worked On
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -24,7 +33,7 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          if git diff --quiet; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "No README changes."
             exit 0
           fi

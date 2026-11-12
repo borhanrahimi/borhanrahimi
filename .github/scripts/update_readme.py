@@ -4,6 +4,9 @@ import os
 import re
 import shutil
 import urllib.request
+from collections import Counter
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 
 import readme_svgs
 
@@ -21,6 +24,13 @@ FEATURED_TOPIC = "featured"
 DEFAULT_FEATURED = ["linkwell", "file_organizer", "borhan-portfolio"]
 
 MAX_RECENT_PROJECTS = 3
+
+MAX_ACTIVITY_ITEMS = 5
+
+MAX_LANGUAGES = 6
+
+# Used to work out what time of day I usually code
+MY_TIMEZONE = ZoneInfo("America/Chicago")
 
 # Section titles in the README: (number, title, file name)
 SECTIONS = [
@@ -248,7 +258,22 @@ user_stats = github_graphql(f"""{{
     pullRequests {{ totalCount }}
     issues {{ totalCount }}
     repositoriesContributedTo(contributionTypes: [COMMIT, PULL_REQUEST, ISSUE]) {{ totalCount }}
-    contributionsCollection {{ totalCommitContributions restrictedContributionsCount }}
+    contributionsCollection {{
+      totalCommitContributions
+      restrictedContributionsCount
+      contributionCalendar {{
+        totalContributions
+        weeks {{ contributionDays {{ date contributionCount weekday }} }}
+      }}
+    }}
+    repositories(first: 100, ownerAffiliations: OWNER, isFork: false, privacy: PUBLIC) {{
+      nodes {{
+        name
+        languages(first: 10, orderBy: {{field: SIZE, direction: DESC}}) {{
+          edges {{ size node {{ name color }} }}
+        }}
+      }}
+    }}
   }}
 }}""")["user"]
 
@@ -264,6 +289,48 @@ stats = [
 ]
 
 write_themed(f"{ASSETS_DIR}/stats", lambda theme: readme_svgs.stats_card(stats, theme))
+
+
+# ---------- Contribution heatmap ----------
+
+calendar = contributions["contributionCalendar"]
+
+calendar_weeks = [
+    [(day["date"], day["contributionCount"], day["weekday"]) for day in week["contributionDays"]]
+    for week in calendar["weeks"]
+]
+
+write_themed(
+    f"{ASSETS_DIR}/heatmap",
+    lambda theme: readme_svgs.heatmap(calendar_weeks, calendar["totalContributions"], theme),
+)
+
+
+# ---------- Top languages ----------
+
+language_sizes = Counter()
+language_colors = {}
+
+for repo in user_stats["repositories"]["nodes"]:
+    if repo["name"].lower() == USERNAME.lower():
+        continue
+
+    for edge in repo["languages"]["edges"]:
+        name = edge["node"]["name"]
+        language_sizes[name] += edge["size"]
+        language_colors[name] = edge["node"]["color"] or "#8B949E"
+
+total_size = sum(language_sizes.values()) or 1
+top_languages = language_sizes.most_common(MAX_LANGUAGES)
+
+languages = [(name, size / total_size, language_colors[name]) for name, size in top_languages]
+
+# Everything outside the top few goes into "Other" so the bar adds up to 100%
+other_size = total_size - sum(size for _, size in top_languages)
+if languages and other_size > 0:
+    languages[-1] = ("Other", (top_languages[-1][1] + other_size) / total_size, "#8B949E")
+
+write_themed(f"{ASSETS_DIR}/languages", lambda theme: readme_svgs.languages_card(languages, theme))
 
 
 # ---------- Recently Worked On ----------
@@ -335,6 +402,142 @@ else:
     currently_block = "**Currently building:** something new. Check back soon!"
 
 
+# ---------- Weekly rhythm ----------
+
+# GitHub counts weekdays from Sunday (0), the card starts on Monday
+weekday_totals = [0] * 7
+for week in calendar_weeks:
+    for _, count, weekday in week:
+        weekday_totals[(weekday - 1) % 7] += count
+
+day_names = ["Mondays", "Tuesdays", "Wednesdays", "Thursdays", "Fridays", "Saturdays", "Sundays"]
+
+
+def time_of_day(hour):
+    if 5 <= hour < 12:
+        return "mornings ☀️"
+    if 12 <= hour < 17:
+        return "afternoons"
+    if 17 <= hour < 22:
+        return "evenings"
+    return "late nights 🌙"
+
+
+def event_time(event):
+    return datetime.fromisoformat(event["created_at"].replace("Z", "+00:00"))
+
+
+busiest_time = Counter(
+    time_of_day(event_time(event).astimezone(MY_TIMEZONE).hour) for event in events
+).most_common(1)
+
+if any(weekday_totals):
+    rhythm_headline = f"Most active: {day_names[weekday_totals.index(max(weekday_totals))]}"
+    if busiest_time:
+        rhythm_headline += f" · {busiest_time[0][0]}"
+else:
+    rhythm_headline = "No contributions yet this year"
+
+write_themed(
+    f"{ASSETS_DIR}/rhythm",
+    lambda theme: readme_svgs.rhythm_card(weekday_totals, rhythm_headline, theme),
+)
+
+
+# ---------- Recent activity ----------
+
+def time_ago(moment):
+    seconds = (datetime.now(timezone.utc) - moment).total_seconds()
+
+    for unit, size in (("w", 604800), ("d", 86400), ("h", 3600), ("m", 60)):
+        if seconds >= size:
+            return f"{int(seconds // size)}{unit} ago"
+
+    return "just now"
+
+
+def repo_link(full_name):
+    owner, name = full_name.split("/")
+    label = display_name(name) if owner.lower() == USERNAME.lower() else full_name
+    return f"[{label}](https://github.com/{full_name})"
+
+
+def describe(event):
+    # One line for an event, or None to skip it
+    kind = event["type"]
+    payload = event.get("payload", {})
+    repo = repo_link(event["repo"]["name"])
+
+    if kind == "PushEvent":
+        return f"⬆️ Pushed to {repo}"
+
+    if kind == "PullRequestEvent":
+        pull = payload.get("pull_request", {})
+        number = payload.get("number") or pull.get("number")
+        title = pull.get("title")
+        name = f"PR #{number}" + (f": {title}" if title else "")
+        link = pull.get("html_url") or f"https://github.com/{event['repo']['name']}/pull/{number}"
+
+        if payload.get("action") == "opened":
+            return f"🔀 Opened [{name}]({link}) in {repo}"
+        if payload.get("action") == "closed" and pull.get("merged"):
+            return f"✅ Merged [{name}]({link}) in {repo}"
+        return None
+
+    if kind == "IssuesEvent" and payload.get("action") in ("opened", "closed"):
+        issue = payload.get("issue", {})
+        verb = "Opened" if payload["action"] == "opened" else "Closed"
+        return f"🐛 {verb} issue [#{issue.get('number')}]({issue.get('html_url')}) in {repo}"
+
+    if kind == "CreateEvent":
+        if payload.get("ref_type") == "repository":
+            return f"✨ Created {repo}"
+        if payload.get("ref_type") == "tag":
+            return f"🏷️ Tagged `{payload.get('ref')}` in {repo}"
+        return None
+
+    if kind == "ReleaseEvent" and payload.get("action") == "published":
+        release = payload.get("release", {})
+        return f"🚀 Released [{release.get('tag_name')}]({release.get('html_url')}) of {repo}"
+
+    if kind == "PullRequestReviewEvent":
+        return f"👀 Reviewed a pull request in {repo}"
+
+    if kind == "WatchEvent":
+        return f"⭐ Starred {repo}"
+
+    if kind == "ForkEvent":
+        return f"🍴 Forked {repo}"
+
+    return None
+
+
+activity_lines = []
+last_line = None
+
+for event in events:
+    # Skip the profile repository itself, the daily bot pushes would fill the list
+    if event["repo"]["name"].split("/")[-1].lower() == USERNAME.lower():
+        continue
+
+    line = describe(event)
+
+    # Several pushes in a row to the same repo show up as one line
+    if not line or line == last_line:
+        continue
+
+    last_line = line
+    activity_lines.append(f"{line} · <sub>{time_ago(event_time(event))}</sub>")
+
+    if len(activity_lines) >= MAX_ACTIVITY_ITEMS:
+        break
+
+if not activity_lines:
+    activity_lines.append("No recent public activity.")
+
+activity_block = "\n".join(line + "  " for line in activity_lines).rstrip()
+
+
 # ---------- Write README ----------
 
 with open(README_PATH, "r", encoding="utf-8") as file:
@@ -343,6 +546,7 @@ with open(README_PATH, "r", encoding="utf-8") as file:
 content = replace_section(content, "FEATURED_PROJECTS", featured_block)
 content = replace_section(content, "RECENT_PROJECTS", recent_block)
 content = replace_section(content, "CURRENTLY_BUILDING", currently_block)
+content = replace_section(content, "RECENT_ACTIVITY", activity_block)
 
 
 def add_version(match):

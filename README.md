@@ -92,12 +92,24 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg?v=708467d8"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b" width="100%" alt="GitHub Activity"></picture>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg" width="100%" alt="Contribution heatmap"></picture>
+
 <div align="center">
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg?v=a114a286"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-light.svg?v=d71c2c27"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg?v=a114a286" height="165" alt="GitHub Stats"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&theme=tokyonight&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF"><source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&background=F6F8FA&ring=0969DA&fire=0969DA&currStreakLabel=0969DA&sideNums=1F2328&sideLabels=59636E&dates=59636E"><img src="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&theme=tokyonight&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" height="165" alt="GitHub Streak"></picture>
 
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-dark.svg" height="165" alt="Top Languages"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-dark.svg" height="165" alt="Weekly Rhythm"></picture>
+
 </div>
+
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg" width="100%" alt="Snake eating my contribution graph"></picture>
+
+**Latest on GitHub**
+
+<!--RECENT_ACTIVITY:start-->
+<!--RECENT_ACTIVITY:end-->
 
 <br>
 
