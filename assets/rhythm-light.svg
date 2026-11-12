@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495 195" width="495" height="195" role="img" aria-label="Weekly rhythm. Most active: Tuesdays · late nights 🌙">
+  <rect x="0.5" y="0.5" width="494" height="194" rx="12" fill="#F6F8FA" stroke="#D0D7DE"/>
+  <text x="28" y="40" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#0969DA">Weekly Rhythm</text>
+  <text x="467" y="40" text-anchor="end" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#59636E">Most active: Tuesdays · late nights 🌙</text>
+  <rect x="40" y="119.5" width="38" height="36.5" rx="5" fill="#0969DA" fill-opacity="0.35"><title>Mon: 41 contributions</title></rect>
+  <text x="59" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636E">Mon</text>
+  <rect x="102" y="74.0" width="38" height="82.0" rx="5" fill="#0969DA" fill-opacity="1"><title>Tue: 92 contributions</title></rect>
+  <text x="121" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#1F2328">Tue</text>
+  <rect x="164" y="127.5" width="38" height="28.5" rx="5" fill="#0969DA" fill-opacity="0.35"><title>Wed: 32 contributions</title></rect>
+  <text x="183" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636E">Wed</text>
+  <rect x="226" y="148.0" width="38" height="8.0" rx="5" fill="#0969DA" fill-opacity="0.35"><title>Thu: 9 contributions</title></rect>
+  <text x="245" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636E">Thu</text>
+  <rect x="288" y="116.8" width="38" height="39.2" rx="5" fill="#0969DA" fill-opacity="0.35"><title>Fri: 44 contributions</title></rect>
+  <text x="307" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636E">Fri</text>
+  <rect x="350" y="107.9" width="38" height="48.1" rx="5" fill="#0969DA" fill-opacity="0.35"><title>Sat: 54 contributions</title></rect>
+  <text x="369" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636E">Sat</text>
+  <rect x="412" y="120.3" width="38" height="35.7" rx="5" fill="#0969DA" fill-opacity="0.35"><title>Sun: 40 contributions</title></rect>
+  <text x="431" y="176" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="400" fill="#59636E">Sun</text>
+</svg>
