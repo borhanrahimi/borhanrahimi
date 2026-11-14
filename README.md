@@ -18,7 +18,7 @@
 - Always building something new, learning a new tool, or improving one of my projects
 
 <!--CURRENTLY_BUILDING:start-->
-**Currently building:** [File Organizer](https://github.com/borhanrahimi/file_organizer) · Automatically organizes and renames files as they're downloaded, using Python and real-time folder watching.
+**Currently building:** [Linkwell](https://github.com/borhanrahimi/linkwell) · A smarter bookmark manager that helps you save, organize, maintain, and rediscover links.
 <!--CURRENTLY_BUILDING:end-->
 
 <br>
@@ -83,16 +83,16 @@
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-light.svg?v=342d0dfd"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/recent-dark.svg?v=855188bd" width="100%" alt="Recently Worked On"></picture>
 
 <!--RECENT_PROJECTS:start-->
+**[Linkwell](https://github.com/borhanrahimi/linkwell)** · TypeScript  
 **[File Organizer](https://github.com/borhanrahimi/file_organizer)** · Python  
-**[PicPick](https://github.com/borhanrahimi/PicPick)** · Java  
-**[NetGuard](https://github.com/borhanrahimi/NetGuard)** · Python
+**[PicPick](https://github.com/borhanrahimi/PicPick)** · Java
 <!--RECENT_PROJECTS:end-->
 
 <br>
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg?v=708467d8"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b" width="100%" alt="GitHub Activity"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=94937184"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg?v=7bd60f91"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=94937184" width="100%" alt="Contribution heatmap"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=7e75a586"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg?v=29bd524e"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=7e75a586" width="100%" alt="Contribution heatmap"></picture>
 
 <div align="center">
 
@@ -104,16 +104,16 @@
 
 </div>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=b1ae345b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg?v=9c71d580"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=b1ae345b" width="100%" alt="Snake eating my contribution graph"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=f8fc8be8"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg?v=383387fb"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=f8fc8be8" width="100%" alt="Snake eating my contribution graph"></picture>
 
 **Latest on GitHub**
 
 <!--RECENT_ACTIVITY:start-->
-🔀 Opened [PR #22](https://github.com/borhanrahimi/linkwell/pull/22) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1d ago</sub>  
+⬆️ Pushed to [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2d ago</sub>  
+🔀 Opened [PR #22](https://github.com/borhanrahimi/linkwell/pull/22) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2d ago</sub>  
 🔀 Opened [PR #18](https://github.com/borhanrahimi/linkwell/pull/18) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
 🔀 Opened [PR #17](https://github.com/borhanrahimi/linkwell/pull/17) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
-🔀 Opened [PR #16](https://github.com/borhanrahimi/linkwell/pull/16) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
-⬆️ Pushed to [File Organizer](https://github.com/borhanrahimi/file_organizer) · <sub>1w ago</sub>
+🔀 Opened [PR #16](https://github.com/borhanrahimi/linkwell/pull/16) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>
 <!--RECENT_ACTIVITY:end-->
 
 <br>
