@@ -92,7 +92,7 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg?v=708467d8"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b" width="100%" alt="GitHub Activity"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=0db9eb38"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg?v=e1b55d71"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=0db9eb38" width="100%" alt="Contribution heatmap"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=0d8975be"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg?v=bf60166c"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=0d8975be" width="100%" alt="Contribution heatmap"></picture>
 
 <div align="center">
 
@@ -104,16 +104,16 @@
 
 </div>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=fb880717"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg?v=cb0522bf"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=fb880717" width="100%" alt="Snake eating my contribution graph"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=34a2ee33"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg?v=3e6a17d6"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=34a2ee33" width="100%" alt="Snake eating my contribution graph"></picture>
 
 **Latest on GitHub**
 
 <!--RECENT_ACTIVITY:start-->
-⬆️ Pushed to [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>5d ago</sub>  
-🔀 Opened [PR #22](https://github.com/borhanrahimi/linkwell/pull/22) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>5d ago</sub>  
-🔀 Opened [PR #18](https://github.com/borhanrahimi/linkwell/pull/18) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
-🔀 Opened [PR #17](https://github.com/borhanrahimi/linkwell/pull/17) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
-🔀 Opened [PR #16](https://github.com/borhanrahimi/linkwell/pull/16) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>
+⬆️ Pushed to [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>6d ago</sub>  
+🔀 Opened [PR #22](https://github.com/borhanrahimi/linkwell/pull/22) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>6d ago</sub>  
+🔀 Opened [PR #18](https://github.com/borhanrahimi/linkwell/pull/18) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2w ago</sub>  
+🔀 Opened [PR #17](https://github.com/borhanrahimi/linkwell/pull/17) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2w ago</sub>  
+🔀 Opened [PR #16](https://github.com/borhanrahimi/linkwell/pull/16) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2w ago</sub>
 <!--RECENT_ACTIVITY:end-->
 
 <br>
