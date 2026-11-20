@@ -92,28 +92,28 @@
 
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-light.svg?v=708467d8"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/sections/activity-dark.svg?v=1675cb0b" width="100%" alt="GitHub Activity"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=f597f525"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg?v=a91b60d5"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=f597f525" width="100%" alt="Contribution heatmap"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=d044c348"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-light.svg?v=2d7947d7"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/heatmap-dark.svg?v=d044c348" width="100%" alt="Contribution heatmap"></picture>
 
 <div align="center">
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg?v=bdc67700"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-light.svg?v=a66afff0"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg?v=bdc67700" height="165" alt="GitHub Stats"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg?v=02b3efff"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-light.svg?v=1d83ad4b"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/stats-dark.svg?v=02b3efff" height="165" alt="GitHub Stats"></picture>
 <picture><source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&theme=tokyonight&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF"><source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&background=F6F8FA&ring=0969DA&fire=0969DA&currStreakLabel=0969DA&sideNums=1F2328&sideLabels=59636E&dates=59636E"><img src="https://streak-stats.demolab.com?user=borhanrahimi&hide_border=true&theme=tokyonight&background=0D1117&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF" height="165" alt="GitHub Streak"></picture>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-dark.svg?v=c90fb87c"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-light.svg?v=ad586369"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-dark.svg?v=c90fb87c" height="165" alt="Top Languages"></picture>
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-dark.svg?v=32edd1bd"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-light.svg?v=332cf93d"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-dark.svg?v=32edd1bd" height="165" alt="Weekly Rhythm"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-dark.svg?v=6f23e100"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-light.svg?v=f7e37e3e"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/languages-dark.svg?v=6f23e100" height="165" alt="Top Languages"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-dark.svg?v=e908a06c"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-light.svg?v=f162f80f"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/rhythm-dark.svg?v=e908a06c" height="165" alt="Weekly Rhythm"></picture>
 
 </div>
 
-<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=9c372a00"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg?v=6625f2f2"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=9c372a00" width="100%" alt="Snake eating my contribution graph"></picture>
+<picture><source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=6e152396"><source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-light.svg?v=a2c2ec40"><img src="https://raw.githubusercontent.com/borhanrahimi/borhanrahimi/main/assets/snake-dark.svg?v=6e152396" width="100%" alt="Snake eating my contribution graph"></picture>
 
 **Latest on GitHub**
 
 <!--RECENT_ACTIVITY:start-->
-🔀 Opened [PR #25](https://github.com/borhanrahimi/linkwell/pull/25) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>8m ago</sub>  
+⬆️ Pushed to [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>20h ago</sub>  
+🔀 Opened [PR #25](https://github.com/borhanrahimi/linkwell/pull/25) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>23h ago</sub>  
 ⬆️ Pushed to [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
 🔀 Opened [PR #22](https://github.com/borhanrahimi/linkwell/pull/22) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>1w ago</sub>  
-🔀 Opened [PR #18](https://github.com/borhanrahimi/linkwell/pull/18) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2w ago</sub>  
-🔀 Opened [PR #17](https://github.com/borhanrahimi/linkwell/pull/17) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2w ago</sub>
+🔀 Opened [PR #18](https://github.com/borhanrahimi/linkwell/pull/18) in [Linkwell](https://github.com/borhanrahimi/linkwell) · <sub>2w ago</sub>
 <!--RECENT_ACTIVITY:end-->
 
 <br>
